@@ -16,7 +16,7 @@ public class Futebol extends World
     public Futebol()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 600, 1); 
+       super(1200, 700, 1);  
         pintaMundo(0,128,0);
         atores();
         //golosMarcar=Greenfoot.getRandomNumber(11);

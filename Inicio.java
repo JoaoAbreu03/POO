@@ -16,13 +16,14 @@ public class Inicio extends World
     public Inicio()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 600, 1); 
+        super(1200, 700, 1); 
         populateWorld();
-        //pintaMundo(118,8,118);
+        pintaMundo(45,171,253);
     }
     public void populateWorld(){
-        addObject(new Titulo(),432,150);
-        addObject(new Subtitulo(),460,237);
+        addObject(new Fundo(),604,364);
+        addObject(new Titulo(),605,80);
+        addObject(new Subtitulo(),621,671);
         addObject(new Play(),480,325);
         showText("Play", 481,330);
         /*showText("Barbie e Ken ",150,100);
