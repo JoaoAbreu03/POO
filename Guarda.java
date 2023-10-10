@@ -15,7 +15,7 @@ public class Guarda extends Actor
         GreenfootImage image = getImage();
         int witdth = image.getWidth();
         int height = image.getHeight();
-        image.scale(witdth*3,height*3);
+        image.scale(witdth/4,height/4);
         SX=1;
     }
     /**
