@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Tenis
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tenis\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Tenis()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tenis.\r\n\ \r\n
+comment2.params=r\ g\ b
+comment2.target=void\ pintaMundo(int,\ int,\ int)
+numComments=3
