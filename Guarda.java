@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Guarda extends Actor
 {
-    private final int SPEED=2;
+    private final int SPEED=4;
     private int SX;
     String[] paises = {"Espanha", "França", "Ingleterra", "Argentina"};
     public Guarda(){
@@ -24,8 +24,8 @@ public class Guarda extends Actor
      */
     public void act()
     {
-        move();
-        volta();
+        //move();
+        //volta();
     }
      private void volta(){
        if(getX()==0){
@@ -37,7 +37,7 @@ public class Guarda extends Actor
     }
       private void move(){
         int x= getX();
-        int y=70;
+        int y=130;
         
         x=x+SPEED*SX;
        

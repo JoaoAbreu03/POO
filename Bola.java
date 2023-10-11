@@ -18,22 +18,19 @@ public class Bola extends Actor
        golos=0;
      
     }
-    
-    
     /**
      * Act - do whatever the Bola wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
+    public void act(){
         moveBola();
         contagolos();
-      if(!numeroGolosGerado){
+        if(!numeroGolosGerado){
         
-        golosMarcar=Greenfoot.getRandomNumber(2)+2;
-        getWorld().showText("Golos a marcar: "+golosMarcar, 750,50);
-        numeroGolosGerado=true;
-    }
+         golosMarcar=Greenfoot.getRandomNumber(2)+2;
+         getWorld().showText("Golos a marcar: "+golosMarcar, 750,50);
+         numeroGolosGerado=true;
+        }
         //golosMarcar=Greenfoot.getRandomNumber(6)+5;
         //getWorld().showText("Golos a marcar: "+golosMarcar, 750,50);
         passarnivel();
@@ -79,20 +76,41 @@ public class Bola extends Actor
         }
     }
     private void contagolos(){
-         if (isTouching(Baliza.class))
+         if (isTouching(Baliza.class) && !isTouching(Guarda.class))
         {
+            Greenfoot.playSound("siuuu.mp3");
             golos=golos+1;
             getWorld().showText("Golos: "+golos, 100,50);
+            
+            Greenfoot.delay(4);
+            setLocation(450,550);
+            //nao ta a reconhecer o !istouching guuarda
+            //System.out.println("Tocando AtorA, mas não AtorB.");
+            
+        }
+       
+
+        else if (isTouching(Guarda.class) && isTouching(Baliza.class))
+        {
+            Greenfoot.playSound("naah.mp3");
+            Greenfoot.delay(4);
+            setLocation(450,550);
+        }
+        else if(isTouching(Guarda.class)){
+            Greenfoot.playSound("naah.mp3");
+            Greenfoot.delay(4);
+            setLocation(450,550);
+        }else if (isTouching(Baliza.class))
+        {
+            Greenfoot.playSound("siuuu.mp3");
+            golos=golos+1;
+            getWorld().showText("Golos: "+golos, 100,50);
+    
             Greenfoot.delay(4);
             setLocation(450,550);
             
-        }else if (isTouching(Guarda.class))
-        {
-            Greenfoot.delay(4);
-            Greenfoot.stop();
         }
-        
-    }
+    
     /*public int geraGolos(){
            if(!golosMarcar){
        
@@ -101,6 +119,7 @@ public class Bola extends Actor
     }
         return golosMarcar;
     }*/
+}
     public void passarnivel(){
     
         if(golos==golosMarcar){

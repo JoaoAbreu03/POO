@@ -26,12 +26,12 @@ public class Futebol extends World
        
     }
     private void atores(){
-        addObject(new Baliza(),450,70);
+        addObject(new Baliza(),600,100);
         //Greenfoot.getRandomNumber(getWidth()),60);
         addObject(new Bola(),450,520);
         addObject(new Barbie(),360,570);
         addObject(new Ken(),340,540);
-        addObject(new Guarda(),450,110);
+        addObject(new Guarda(),615,170);
     }
     private void pintaMundo(int r,int g, int b){
         GreenfootImage fundo= getBackground();
