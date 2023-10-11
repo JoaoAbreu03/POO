@@ -19,11 +19,20 @@ public class Tenis extends World
         super(1200, 700, 1); 
         pintaMundo(0,128,0);
         showText("Tenis",200,300);
+        populate();
     }
     private void pintaMundo(int r,int g, int b){
         GreenfootImage fundo= getBackground();
         Color cor = new Color(r,g,b);
         fundo.setColor(cor);
         fundo.fill();
+    }
+    private void populate(){
+        
+        addObject(new Barbie(),944,149);
+        addObject(new Raquete(),912,148);
+        addObject(new Ken(),944,476);
+        addObject(new Jogadora1(),181,149);
+        addObject(new Jogadora2(),174,476);
     }
 }

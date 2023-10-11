@@ -16,7 +16,9 @@ public class Barbie extends Jogadores
         int height = image.getHeight();
         image.scale(witdth/4,height/4);
         imagem1= new GreenfootImage("barbiejogadoracostas.png");
+        imagem1.scale(witdth/4,height/4);
         imagem2= new GreenfootImage("barbietenislado.png");
+        imagem2.scale(witdth/4,height/4);
     }
     /**
      * Act - do whatever the Barbie wants to do. This method is called whenever
@@ -25,6 +27,7 @@ public class Barbie extends Jogadores
     public void act()
     {
         moveBarbie();
+        mudar();
        
     }
     public void moveBarbie(){
@@ -43,6 +46,14 @@ public class Barbie extends Jogadores
         else if(Greenfoot.isKeyDown("down")){
             setLocation(x, y+2);
         }
+    }
+    public void mudar(){
+        if (getWorld() instanceof Futebol) {
+            setImage(imagem1);
+        }else if(getWorld() instanceof Tenis){
+            setImage(imagem2);
+        }
+        
     }
    
     }

@@ -8,6 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Jogadora2 extends Actor
 {
+    public Jogadora2(){
+        GreenfootImage image = getImage();
+        int witdth = image.getWidth();
+        int height = image.getHeight();
+        image.scale(witdth/4,height/4);
+    
+    }
     /**
      * Act - do whatever the Jogadora2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

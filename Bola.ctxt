@@ -12,4 +12,5 @@ comment4.params=
 comment4.target=void\ contagolos()
 comment5.params=
 comment5.target=void\ passarnivel()
+comment5.text=public\ int\ geraGolos(){\r\n\ \ \ \ \ \ \ \ \ \ \ if(\!golosMarcar){\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ golosMarcar\=Greenfoot.getRandomNumber(6)+5;\r\n\ \ \ \ \ \ \ \ getWorld().showText("Golos\ a\ marcar\:\ "+golosMarcar,\ 750,50);\r\n\ \ \ \ }\r\n\ \ \ \ \ \ \ \ return\ golosMarcar;\r\n}
 numComments=6

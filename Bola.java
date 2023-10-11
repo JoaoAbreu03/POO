@@ -11,12 +11,10 @@ public class Bola extends Actor
 
     private int golos, golosMarcar;  
     private boolean numeroGolosGerado=false;
-    GreenfootImage imagem1,imagem2;
     
      public Bola()
     {
        golos=0;
-     
     }
     /**
      * Act - do whatever the Bola wants to do. This method is called whenever
@@ -59,7 +57,18 @@ public class Bola extends Actor
             else if((x<xbarbie) && (y>ybarbie)){
              setLocation(x-2, y+2);
             }
-          
+            else if(x<xbarbie){
+             setLocation(x, y-2);
+            }
+            else if(x>xbarbie){
+             setLocation(x, y+2);
+            }
+            else if(y>ybarbie){
+             setLocation(x-2,y);
+            }
+            else if (y<ybarbie){
+             setLocation(x+2, y);
+            }
         }else if(isTouching(Ken.class)){
             int xken = ken.getX();
             int yken = ken.getY();
@@ -73,23 +82,68 @@ public class Bola extends Actor
             else if( (x<xken) && (y>yken)){
              setLocation(x-2, y+2);
             }
+            else if(x<xken){
+             setLocation(x, y-2);
+            }
+            else if(x>xken){
+             setLocation(x, y+2);
+            }
+            else if(y>yken){
+             setLocation(x-2,y);
+            }
+            else if (y<yken){
+             setLocation(x+2, y);
+            }
         }
     }
     private void contagolos(){
-         if (isTouching(Baliza.class) && !isTouching(Guarda.class))
+        
+        Actor balizaColidida = getOneIntersectingObject(Baliza.class);
+         // Verifica se o ator tocou em Ator2
+        boolean estaTocandoGuarda = isTouching(Guarda.class);
+
+         if (balizaColidida != null && !estaTocandoGuarda) {
+            // O ator tocou em Ator1, mas não tocou em Ator2
+            // Faça algo aqui...
+             Greenfoot.playSound("siuuu.mp3");
+                golos=golos+1;
+                getWorld().showText("Golos: "+golos, 100,50);
+                Greenfoot.delay(4);
+                setLocation(450,550);
+        }else if( estaTocandoGuarda && balizaColidida != null){
+           
+                 Greenfoot.playSound("naah.mp3");
+                Greenfoot.delay(4);
+                setLocation(450,550);
+        }
+        // if ((isTouching(Baliza.class)) && (!isTouching(Guarda.class))
+        //Actor guardaColidido = getOneIntersectingObject(Guarda.class);
+        /*if (isTouching(Baliza.class)) 
         {
-            Greenfoot.playSound("siuuu.mp3");
+            Actor guardaColidido = getOneIntersectingObject(Guarda.class);
+            if(guardaColidido!=null){
+                Greenfoot.playSound("naah.mp3");
+                Greenfoot.delay(4);
+                setLocation(450,550);
+            }else if(guardaColidido==null){
+                Greenfoot.playSound("siuuu.mp3");
+                golos=golos+1;
+                getWorld().showText("Golos: "+golos, 100,50);
+                Greenfoot.delay(4);
+                setLocation(450,550);
+            }*/
+            /*Greenfoot.playSound("siuuu.mp3");
             golos=golos+1;
             getWorld().showText("Golos: "+golos, 100,50);
             
             Greenfoot.delay(4);
-            setLocation(450,550);
+            setLocation(450,550);*/
             //nao ta a reconhecer o !istouching guuarda
             //System.out.println("Tocando AtorA, mas não AtorB.");
             
         }
        
-
+/*
         else if (isTouching(Guarda.class) && isTouching(Baliza.class))
         {
             Greenfoot.playSound("naah.mp3");
@@ -109,7 +163,7 @@ public class Bola extends Actor
             Greenfoot.delay(4);
             setLocation(450,550);
             
-        }
+        }*/
     
     /*public int geraGolos(){
            if(!golosMarcar){
@@ -119,7 +173,7 @@ public class Bola extends Actor
     }
         return golosMarcar;
     }*/
-}
+//}
     public void passarnivel(){
     
         if(golos==golosMarcar){
