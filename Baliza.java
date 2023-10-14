@@ -10,7 +10,7 @@ public class Baliza extends Actor
 {
     public Baliza(){
         GreenfootImage image = getImage();
-        image.scale(700,390);
+        image.scale(500,290);
     }
     /**
      * Act - do whatever the Baliza wants to do. This method is called whenever

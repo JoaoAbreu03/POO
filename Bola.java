@@ -11,28 +11,32 @@ public class Bola extends Actor
 
     private int golos, golosMarcar;  
     private boolean numeroGolosGerado=false;
-    
-     public Bola()
-    {
-       golos=0;
+    GreenfootImage bola1,bola2;
+      
+    public Bola(){
+        GreenfootImage image = getImage();
+        int witdth = image.getWidth();
+        int height = image.getHeight();
+        image.scale(witdth/2,height/2);
+        bola1= new GreenfootImage("BolaBarbie.png");
+        bola1.scale(witdth/2,height/2);
+        bola2= new GreenfootImage("tenis1.png");
+        golos=0;
     }
     /**
      * Act - do whatever the Bola wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
+        mudar();
         moveBola();
-        contagolos();
+        contapontos();
         if(!numeroGolosGerado){
-        
          golosMarcar=Greenfoot.getRandomNumber(2)+2;
-         getWorld().showText("Golos a marcar: "+golosMarcar, 750,50);
+         getWorld().showText("Golos a marcar: "+golosMarcar, 1100,650);
          numeroGolosGerado=true;
         }
-        //golosMarcar=Greenfoot.getRandomNumber(6)+5;
-        //getWorld().showText("Golos a marcar: "+golosMarcar, 750,50);
         passarnivel();
-        
     }
     private void moveBola(){
         GreenfootImage image = getImage();
@@ -42,143 +46,106 @@ public class Bola extends Actor
         Actor ken=getOneIntersectingObject(Ken.class);
         int x =  getX();
         int y = getY();
-        if(isTouching(Barbie.class)){
+        if (getWorld() instanceof Futebol) {
+       
+            if(isTouching(Barbie.class)){
             
             int xbarbie = barbie.getX();
             int ybarbie = barbie.getY();
             
             if((x>xbarbie) && (y<ybarbie)) {
-                 setLocation(x+2, y-2);
+                 setLocation(x+6, y-6);
             }else if((x<xbarbie) && (y<ybarbie)){
-             setLocation(x-2, y-2);
+             setLocation(x-6, y-6);
             }else if((x>xbarbie) && (y>ybarbie)) {
-             setLocation(x+2, y+2);
+             setLocation(x+6, y+6);
             }
             else if((x<xbarbie) && (y>ybarbie)){
-             setLocation(x-2, y+2);
+             setLocation(x-6, y+6);
             }
             else if(x<xbarbie){
-             setLocation(x, y-2);
+             setLocation(x, y-6);
             }
             else if(x>xbarbie){
-             setLocation(x, y+2);
+             setLocation(x, y+6);
             }
             else if(y>ybarbie){
-             setLocation(x-2,y);
+             setLocation(x-6,y);
             }
             else if (y<ybarbie){
-             setLocation(x+2, y);
+             setLocation(x+6, y);
             }
-        }else if(isTouching(Ken.class)){
+            }else if(isTouching(Ken.class)){
             int xken = ken.getX();
             int yken = ken.getY();
             if( (x>xken) && (y<yken)) {
-                 setLocation(x+2, y-2);
+                 setLocation(x+6, y-6);
             }else if((x<xken) && (y<yken)){
-             setLocation(x-2, y-2);
+             setLocation(x-6, y-6);
             }else if( (x>xken) && (y>yken)){
-             setLocation(x+2, y+2);
+             setLocation(x+6, y+6);
             }
             else if( (x<xken) && (y>yken)){
-             setLocation(x-2, y+2);
+             setLocation(x-6, y+6);
             }
             else if(x<xken){
-             setLocation(x, y-2);
+             setLocation(x, y-6);
             }
             else if(x>xken){
-             setLocation(x, y+2);
+             setLocation(x, y+6);
             }
             else if(y>yken){
-             setLocation(x-2,y);
+             setLocation(x-6,y);
             }
             else if (y<yken){
-             setLocation(x+2, y);
+             setLocation(x+6, y);
             }
+            }
+        }else if(getWorld() instanceof Tenis){
+            if(isTouching(Barbie.class)){
+                
+            }else if(isTouching(Ken.class)){
+                
+            }else if(isTouching(Rede.class)){
+                
+            }
+            
         }
     }
-    private void contagolos(){
-        
-        Actor balizaColidida = getOneIntersectingObject(Baliza.class);
-         // Verifica se o ator tocou em Ator2
-        boolean estaTocandoGuarda = isTouching(Guarda.class);
 
-         if (balizaColidida != null && !estaTocandoGuarda) {
-            // O ator tocou em Ator1, mas não tocou em Ator2
-            // Faça algo aqui...
-             Greenfoot.playSound("siuuu.mp3");
-                golos=golos+1;
-                getWorld().showText("Golos: "+golos, 100,50);
-                Greenfoot.delay(4);
-                setLocation(450,550);
-        }else if( estaTocandoGuarda && balizaColidida != null){
-           
-                 Greenfoot.playSound("naah.mp3");
-                Greenfoot.delay(4);
-                setLocation(450,550);
-        }
-        // if ((isTouching(Baliza.class)) && (!isTouching(Guarda.class))
-        //Actor guardaColidido = getOneIntersectingObject(Guarda.class);
-        /*if (isTouching(Baliza.class)) 
-        {
-            Actor guardaColidido = getOneIntersectingObject(Guarda.class);
-            if(guardaColidido!=null){
+    private void contapontos(){
+        if(getWorld() instanceof Futebol){
+            if(isTouching(Guarda.class)){
                 Greenfoot.playSound("naah.mp3");
-                Greenfoot.delay(4);
-                setLocation(450,550);
-            }else if(guardaColidido==null){
+                Greenfoot.delay(5);
+                setLocation(650,550);
+            }else if(isTouching(Baliza.class)){
                 Greenfoot.playSound("siuuu.mp3");
                 golos=golos+1;
-                getWorld().showText("Golos: "+golos, 100,50);
-                Greenfoot.delay(4);
-                setLocation(450,550);
-            }*/
-            /*Greenfoot.playSound("siuuu.mp3");
-            golos=golos+1;
-            getWorld().showText("Golos: "+golos, 100,50);
-            
-            Greenfoot.delay(4);
-            setLocation(450,550);*/
-            //nao ta a reconhecer o !istouching guuarda
-            //System.out.println("Tocando AtorA, mas não AtorB.");
+                getWorld().showText("Golos: "+golos, 100,650);
+                Greenfoot.delay(5);
+                setLocation(650,550);
+            }
+        }else if(getWorld() instanceof Tenis){
+        }
             
         }
-       
-/*
-        else if (isTouching(Guarda.class) && isTouching(Baliza.class))
-        {
-            Greenfoot.playSound("naah.mp3");
-            Greenfoot.delay(4);
-            setLocation(450,550);
+    public void mudar(){
+        if (getWorld() instanceof Futebol) {
+            setImage(bola1);
+        }else if(getWorld() instanceof Tenis){
+            setImage(bola2);
         }
-        else if(isTouching(Guarda.class)){
-            Greenfoot.playSound("naah.mp3");
-            Greenfoot.delay(4);
-            setLocation(450,550);
-        }else if (isTouching(Baliza.class))
-        {
-            Greenfoot.playSound("siuuu.mp3");
-            golos=golos+1;
-            getWorld().showText("Golos: "+golos, 100,50);
-    
-            Greenfoot.delay(4);
-            setLocation(450,550);
-            
-        }*/
-    
-    /*public int geraGolos(){
-           if(!golosMarcar){
-       
-        golosMarcar=Greenfoot.getRandomNumber(6)+5;
-        getWorld().showText("Golos a marcar: "+golosMarcar, 750,50);
+        
     }
-        return golosMarcar;
-    }*/
-//}
     public void passarnivel(){
-    
+    if (getWorld() instanceof Futebol) {
         if(golos==golosMarcar){
             Greenfoot.setWorld(new Tenis());
         }
+    }else if(getWorld() instanceof Tenis){
+        
+    }
         
     }
 }

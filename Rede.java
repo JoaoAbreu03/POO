@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Raquete here.
+ * Write a description of class Rede here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Raquete extends Actor
+public class Rede extends Actor
 {
     /**
-     * Act - do whatever the Raquete wants to do. This method is called whenever
+     * Act - do whatever the Rede wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()

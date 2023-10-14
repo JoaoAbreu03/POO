@@ -6,6 +6,4 @@ comment1.target=Futebol()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Futebol.\r\n\ \r\n
 comment2.params=
 comment2.target=void\ atores()
-comment3.params=r\ g\ b
-comment3.target=void\ pintaMundo(int,\ int,\ int)
-numComments=4
+numComments=3

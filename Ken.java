@@ -15,7 +15,7 @@ public class Ken extends Jogadores
         image.scale(witdth/4,height/4);
         imagem1= new GreenfootImage("kenjogadorcostas.png");
         imagem1.scale(witdth/4,height/4);
-        imagem2= new GreenfootImage("kentenislado.png");
+        imagem2= new GreenfootImage("kentenisladooraquete.png");
         imagem2.scale(witdth/4,height/4);
 
     }
