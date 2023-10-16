@@ -8,11 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bola extends Actor
 {
-
-    private int golos, golosMarcar;  
+    private int golos, golosMarcar, equipa,jogador;  
     private boolean numeroGolosGerado=false;
     GreenfootImage bola1,bola2;
-      
     public Bola(){
         GreenfootImage image = getImage();
         int witdth = image.getWidth();
@@ -46,62 +44,74 @@ public class Bola extends Actor
         Actor ken=getOneIntersectingObject(Ken.class);
         int x =  getX();
         int y = getY();
-        if (getWorld() instanceof Futebol) {
+        
        
-            if(isTouching(Barbie.class)){
+        if(isTouching(Barbie.class)){
             
             int xbarbie = barbie.getX();
             int ybarbie = barbie.getY();
-            
-            if((x>xbarbie) && (y<ybarbie)) {
-                 setLocation(x+6, y-6);
-            }else if((x<xbarbie) && (y<ybarbie)){
-             setLocation(x-6, y-6);
-            }else if((x>xbarbie) && (y>ybarbie)) {
-             setLocation(x+6, y+6);
+            if (getWorld() instanceof Futebol) {
+                if((x>xbarbie) && (y<ybarbie)) {
+                     setLocation(x+6, y-6);
+                }else if((x<xbarbie) && (y<ybarbie)){
+                 setLocation(x-6, y-6);
+                }else if((x>xbarbie) && (y>ybarbie)) {
+                 setLocation(x+6, y+6);
+                }
+                else if((x<xbarbie) && (y>ybarbie)){
+                 setLocation(x-6, y+6);
+                }
+                else if(x<xbarbie){
+                 setLocation(x, y-6);
+                }
+                else if(x>xbarbie){
+                 setLocation(x, y+6);
+                }
+                else if(y>ybarbie){
+                 setLocation(x-6,y);
+                }
+                else if (y<ybarbie){
+                 setLocation(x+6, y);
+                }
+            }else  if(getWorld() instanceof Tenis){
+                setLocation(x-Greenfoot.getRandomNumber(getWorld().getWidth()-50),y-Greenfoot.getRandomNumber(getWorld().getHeight()-50));
             }
-            else if((x<xbarbie) && (y>ybarbie)){
-             setLocation(x-6, y+6);
-            }
-            else if(x<xbarbie){
-             setLocation(x, y-6);
-            }
-            else if(x>xbarbie){
-             setLocation(x, y+6);
-            }
-            else if(y>ybarbie){
-             setLocation(x-6,y);
-            }
-            else if (y<ybarbie){
-             setLocation(x+6, y);
-            }
-            }else if(isTouching(Ken.class)){
+        }else if(isTouching(Ken.class)){
             int xken = ken.getX();
             int yken = ken.getY();
-            if( (x>xken) && (y<yken)) {
-                 setLocation(x+6, y-6);
-            }else if((x<xken) && (y<yken)){
-             setLocation(x-6, y-6);
-            }else if( (x>xken) && (y>yken)){
-             setLocation(x+6, y+6);
+            if(getWorld() instanceof Futebol){
+                if( (x>xken) && (y<yken)) {
+                     setLocation(x+6, y-6);
+                }else if((x<xken) && (y<yken)){
+                 setLocation(x-6, y-6);
+                }else if( (x>xken) && (y>yken)){
+                 setLocation(x+6, y+6);
+                }
+                else if( (x<xken) && (y>yken)){
+                 setLocation(x-6, y+6);
+                }
+                else if(x<xken){
+                 setLocation(x, y-6);
+                }
+                else if(x>xken){
+                 setLocation(x, y+6);
+                }
+                else if(y>yken){
+                 setLocation(x-6,y);
+                }
+                else if (y<yken){
+                 setLocation(x+6, y);
+                }
+            }else if(getWorld() instanceof Tenis){
+                setLocation(x-Greenfoot.getRandomNumber(getWorld().getWidth()-100),y-Greenfoot.getRandomNumber(getWorld().getHeight()-100));
             }
-            else if( (x<xken) && (y>yken)){
-             setLocation(x-6, y+6);
-            }
-            else if(x<xken){
-             setLocation(x, y-6);
-            }
-            else if(x>xken){
-             setLocation(x, y+6);
-            }
-            else if(y>yken){
-             setLocation(x-6,y);
-            }
-            else if (y<yken){
-             setLocation(x+6, y);
-            }
-            }
-        }else if(getWorld() instanceof Tenis){
+        }else if(isTouching(Jogadora1.class)){
+            setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
+        }else if(isTouching(Jogadora2.class)){
+            setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
+        }
+    }
+        /*}else if(getWorld() instanceof Tenis){
             if(isTouching(Barbie.class)){
                 
             }else if(isTouching(Ken.class)){
@@ -109,10 +119,8 @@ public class Bola extends Actor
             }else if(isTouching(Rede.class)){
                 
             }
-            
-        }
-    }
-
+        }*/
+    
     private void contapontos(){
         if(getWorld() instanceof Futebol){
             if(isTouching(Guarda.class)){
@@ -138,14 +146,33 @@ public class Bola extends Actor
         }
         
     }
-    public void passarnivel(){
-    if (getWorld() instanceof Futebol) {
-        if(golos==golosMarcar){
-            Greenfoot.setWorld(new Tenis());
+    public void equipa(){
+        equipa=Greenfoot.getRandomNumber(2)+1;
+        jogador=Greenfoot.getRandomNumber(2)+1;
+        //equipa 1 barbie e ken
+        if(equipa==1){
+            //jogador1 barbie
+            if(jogador==1){
+            //jogador2 ken  
+            }else if(jogador==2){
+                
+            }
+            //equipa 2 jogadora1 e jogadora 2
+        }else if(equipa==2){
+            if(jogador==1){
+                
+            }else if(jogador==2){
+                
+            }
         }
-    }else if(getWorld() instanceof Tenis){
-        
     }
-        
+    public void passarnivel(){
+        if (getWorld() instanceof Futebol) {
+            if(golos==golosMarcar){
+                Greenfoot.setWorld(new Tenis());
+            }
+        }else if(getWorld() instanceof Tenis){
+            
+        }
     }
 }

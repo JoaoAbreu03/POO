@@ -6,12 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Guarda extends Actor
+public class Guarda extends JogadoresExtra
 {
-    private int velocidade = 4; 
+   /* private int velocidade = 4; 
     private int limiteEsquerdo = 200;
     private int limiteDireito = 1000;
-    private int direcao = 1; 
+    private int direcao = 1; */
     public Guarda(){
         GreenfootImage image = getImage();
         int witdth = image.getWidth();
@@ -24,16 +24,16 @@ public class Guarda extends Actor
      */
     public void act()
     {
-        move();
+        mover();
         
     }
-    private void move(){
+    /*private void move(){
         if (getX() >= limiteDireito || getX() <= limiteEsquerdo) {
             direcao *= -1; // Inverte a direção
         }
 
         // Move o ator na direção atual
         setLocation(getX() + (velocidade * direcao), getY());
-    }
+    }*/
      
 }

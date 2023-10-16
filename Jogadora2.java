@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Jogadora2 extends Actor
+public class Jogadora2 extends JogadoresExtra
 {
     public Jogadora2(){
         GreenfootImage image = getImage();
@@ -22,5 +22,6 @@ public class Jogadora2 extends Actor
     public void act()
     {
         // Add your action code here.
+        //mover();
     }
 }
