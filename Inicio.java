@@ -13,7 +13,7 @@ public class Inicio extends World
      * Constructor for objects of class Inicio.
      * 
      */
-    public Inicio()
+      public Inicio()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
@@ -34,8 +34,5 @@ public class Inicio extends World
         Color cor = new Color(r,g,b);
         fundo.setColor(cor);
         fundo.fill();
-    }
-    
- 
-    
+    }    
 }

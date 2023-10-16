@@ -6,4 +6,6 @@ comment1.target=Tenis()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Tenis.\r\n\ \r\n
 comment2.params=r\ g\ b
 comment2.target=void\ pintaMundo(int,\ int,\ int)
-numComments=3
+comment3.params=
+comment3.target=void\ populate()
+numComments=4

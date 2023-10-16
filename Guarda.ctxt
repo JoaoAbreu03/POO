@@ -3,13 +3,8 @@ comment0.target=Guarda
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Guarda\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Guarda()
+comment1.text=\ private\ int\ velocidade\ \=\ 4;\ \r\n\ \ \ \ private\ int\ limiteEsquerdo\ \=\ 200;\r\n\ \ \ \ private\ int\ limiteDireito\ \=\ 1000;\r\nprivate\ int\ direcao\ \=\ 1;
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Guarda\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment3.params=
-comment3.target=void\ volta()
-comment4.params=
-comment4.target=void\ move()
-comment5.params=
-comment5.target=void\ guardaredes()
-numComments=6
+numComments=3

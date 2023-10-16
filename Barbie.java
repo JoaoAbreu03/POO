@@ -8,6 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Barbie extends Jogadores
 {
+    GreenfootImage imagem1,imagem2;
+    
+    public Barbie(){
+        GreenfootImage image = getImage();
+        int witdth = image.getWidth();
+        int height = image.getHeight();
+        image.scale(witdth/4,height/4);
+        imagem1= new GreenfootImage("barbiejogadoracostas.png");
+        imagem1.scale(witdth/4,height/4);
+        imagem2= new GreenfootImage("barbietenisladooraquete.png");
+        imagem2.scale(witdth/4,height/4);
+    }
     /**
      * Act - do whatever the Barbie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -15,6 +27,8 @@ public class Barbie extends Jogadores
     public void act()
     {
         moveBarbie();
+        mudar();
+       
     }
     public void moveBarbie(){
         int x = getX();
@@ -33,4 +47,14 @@ public class Barbie extends Jogadores
             setLocation(x, y+2);
         }
     }
-}
+    public void mudar(){
+        if (getWorld() instanceof Futebol) {
+            setImage(imagem1);
+        }else if(getWorld() instanceof Tenis){
+            setImage(imagem2);
+        }
+        
+    }
+   
+    }
+
