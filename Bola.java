@@ -28,10 +28,12 @@ public class Bola extends Actor
     public void act(){
         mudar();
         moveBola();
+        if(getWorld() instanceof Futebol){
         contapontos();
+        }
         if(!numeroPontosGerado){
             golosMarcar=Greenfoot.getRandomNumber(2)+2;
-            getWorld().showText("Pontos a marcar: "+ golosMarcar, 110,650);
+            getWorld().showText("Pontos a marcar: "+ golosMarcar, 1110,650);
             numeroPontosGerado=true;
         }
         passarnivel();
@@ -73,6 +75,9 @@ public class Bola extends Actor
                 }
             }else  if(getWorld() instanceof Tenis){
                 setLocation(x-Greenfoot.getRandomNumber(getWorld().getWidth()-50),y-Greenfoot.getRandomNumber(getWorld().getHeight()-50));
+                if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()>=550){
+                contapontos();
+            }
             }
         }else if(isTouching(Ken.class)){
             int xken = ken.getX();
@@ -102,11 +107,20 @@ public class Bola extends Actor
                 }
             }else if(getWorld() instanceof Tenis){
                 setLocation(x-Greenfoot.getRandomNumber(getWorld().getWidth()-100),y-Greenfoot.getRandomNumber(getWorld().getHeight()-100));
+                if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()>=550){
+                contapontos();
+            }
             }
         }else if(isTouching(Jogadora1.class)){
             setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
+            if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()<=600){
+                contapontos();
+            }
         }else if(isTouching(Jogadora2.class)){
             setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
+            if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()<=600){
+                contapontos();
+            }
         }
     }
     private void contapontos(){
@@ -123,6 +137,9 @@ public class Bola extends Actor
                 setLocation(650,550);
             }
         }else if(getWorld() instanceof Tenis){
+                golos=golos+1;
+                getWorld().showText("Pontos: "+golos, 100,650);
+                Greenfoot.delay(5);
         }
             
         }
@@ -162,7 +179,9 @@ public class Bola extends Actor
                 Greenfoot.setWorld(new Tenis());
             }
         }else if(getWorld() instanceof Tenis){
-            
+             if(golos==golosMarcar){
+                Greenfoot.setWorld(new CorridaDeCarros());
+            }
         }
     }
 }
