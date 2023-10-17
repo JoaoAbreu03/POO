@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class JogadoresExtra extends Actor
 {
-    public int velocidade=4; 
-    
+    public int velocidade=1; 
+    public int velocidade1=4; 
     /**
      * Act - do whatever the JogadoresExtra wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,6 +22,7 @@ public class JogadoresExtra extends Actor
     
     public void moverActoresExtra()
     {
+       
         if (getWorld() instanceof Futebol){
            
             setLocation(getX()+ velocidade,getY());
@@ -31,9 +32,14 @@ public class JogadoresExtra extends Actor
           
     
         }else if(getWorld() instanceof Tenis){
-             setLocation(getX()+ velocidade,getY()+velocidade);
-           if(getX() <= 200 || getX() >= 1000 ){
-               velocidade=-velocidade;
+            //move(5);
+            setLocation(getX()+velocidade,getY());
+            setLocation(getX(),getY()+ velocidade1);
+           if(getX() <= 150 || getX() >= 500 ){
+               velocidade*=-velocidade;
+           }
+           if(getY() <= 100 || getY() >= 650 ){
+               velocidade1=-velocidade1;
            }
         }
         

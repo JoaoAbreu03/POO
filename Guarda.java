@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Guarda extends JogadoresExtra
 {
-   /* private int velocidade = 4; 
-    private int limiteEsquerdo = 200;
-    private int limiteDireito = 1000;
-    private int direcao = 1; */
     public Guarda(){
         GreenfootImage image = getImage();
         int witdth = image.getWidth();
