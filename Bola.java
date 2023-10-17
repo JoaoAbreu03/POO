@@ -34,6 +34,9 @@ public class Bola extends Actor
          getWorld().showText("Golos a marcar: "+golosMarcar, 1100,650);
          numeroGolosGerado=true;
         }
+        if(getWorld() instanceof Tenis){
+            equipa();
+        }
         passarnivel();
     }
     private void moveBola(){
@@ -153,6 +156,7 @@ public class Bola extends Actor
         if(equipa==1){
             //jogador1 barbie
             if(jogador==1){
+                
             //jogador2 ken  
             }else if(jogador==2){
                 
