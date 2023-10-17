@@ -22,17 +22,17 @@ public class JogadoresExtra extends Actor
         //mover();
     }
     public void mover(){
-        /*
-            velocidade = 4; 
-             limiteEsquerdo = 200;
-        limiteDireito = 1000;
-         direcao = 1; */
-            if (getX() >= limiteDireito || getX() <= limiteEsquerdo) {
+        if(getWorld() instanceof Futebol){
+             if (getX() >= limiteDireito || getX() <= limiteEsquerdo) {
                 direcao *= -1; // Inverte a direção
             }
 
             // Move o ator na direção atual
-        setLocation(getX() + (velocidade * direcao), getY());
+            setLocation(getX() + (velocidade * direcao), getY());
+        }else if(getWorld() instanceof Tenis){
+            
+        }
+           
         
     }
 }
