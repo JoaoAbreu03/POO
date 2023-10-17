@@ -15,10 +15,8 @@ public class Tenis extends World
      */
     public Tenis()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
         pintaMundo(0,128,0);
-        //showText("Tenis",200,300);
         populate();
     }
     private void pintaMundo(int r,int g, int b){
@@ -28,9 +26,7 @@ public class Tenis extends World
         fundo.fill();
     }
     private void populate(){
-        
-       addObject(new Barbie(),944,149);
-        
+        addObject(new Barbie(),944,149);
         addObject(new Ken(),944,476);
         addObject(new Jogadora1(),181,149);
         addObject(new Jogadora2(),174,476);

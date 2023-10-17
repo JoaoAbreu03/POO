@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bola extends Actor
 {
-    private int golos, golosMarcar, equipa,jogador;  
-    private boolean numeroGolosGerado=false;
+    private int golos, golosMarcar, equipa, jogador;
+    private boolean numeroPontosGerado=false;
     GreenfootImage bola1,bola2;
     public Bola(){
         GreenfootImage image = getImage();
@@ -29,12 +29,11 @@ public class Bola extends Actor
         mudar();
         moveBola();
         contapontos();
-        if(!numeroGolosGerado){
-         golosMarcar=Greenfoot.getRandomNumber(2)+2;
-         getWorld().showText("Golos a marcar: "+golosMarcar, 1100,650);
-         numeroGolosGerado=true;
+        if(!numeroPontosGerado){
+            golosMarcar=Greenfoot.getRandomNumber(2)+2;
+            getWorld().showText("Pontos a marcar: "+ golosMarcar, 110,650);
+            numeroPontosGerado=true;
         }
-        
         passarnivel();
     }
     private void moveBola(){
@@ -45,8 +44,6 @@ public class Bola extends Actor
         Actor ken=getOneIntersectingObject(Ken.class);
         int x =  getX();
         int y = getY();
-        
-       
         if(isTouching(Barbie.class)){
             
             int xbarbie = barbie.getX();
@@ -112,16 +109,6 @@ public class Bola extends Actor
             setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
         }
     }
-        /*}else if(getWorld() instanceof Tenis){
-            if(isTouching(Barbie.class)){
-                
-            }else if(isTouching(Ken.class)){
-                
-            }else if(isTouching(Rede.class)){
-                
-            }
-        }*/
-    
     private void contapontos(){
         if(getWorld() instanceof Futebol){
             if(isTouching(Guarda.class)){
@@ -163,7 +150,6 @@ public class Bola extends Actor
         }else if(equipa==2){
             if(jogador==1){
                 setLocation(181,149);
-       
             }else if(jogador==2){
                 setLocation(174,476);
             }

@@ -22,7 +22,7 @@ public class Jogadora1 extends JogadoresExtra
     public void act()
     {
         // Add your action code here.
-        mover();
+        
     }
    
 }

@@ -8,10 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class JogadoresExtra extends Actor
 {
-    public int velocidade =4 ; 
-    public int limiteEsquerdo =200;
-    public int limiteDireito=1000 ;
-    public int direcao =1; 
+    public int velocidade=4; 
+    
     /**
      * Act - do whatever the JogadoresExtra wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,18 +19,23 @@ public class JogadoresExtra extends Actor
         // Add your action code here.
         //mover();
     }
-    public void mover(){
-        if(getWorld() instanceof Futebol){
-             if (getX() >= limiteDireito || getX() <= limiteEsquerdo) {
-                direcao *= -1; // Inverte a direção
-            }
-
-            // Move o ator na direção atual
-            setLocation(getX() + (velocidade * direcao), getY());
-        }else if(getWorld() instanceof Tenis){
-            
-        }
+    
+    public void moverActoresExtra()
+    {
+        if (getWorld() instanceof Futebol){
            
+            setLocation(getX()+ velocidade,getY());
+           if(getX() <= 200 || getX() >= 1000 ){
+               velocidade=-velocidade;
+           }
+          
+    
+        }else if(getWorld() instanceof Tenis){
+             setLocation(getX()+ velocidade,getY()+velocidade);
+           if(getX() <= 200 || getX() >= 1000 ){
+               velocidade=-velocidade;
+           }
+        }
         
     }
 }
