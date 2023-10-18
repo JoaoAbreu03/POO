@@ -77,10 +77,12 @@ private void moveBola(){
         }else  if(getWorld() instanceof Tenis){
             setLocation(x-Greenfoot.getRandomNumber(getWorld().getWidth()-50),y-Greenfoot.getRandomNumber(getWorld().getHeight()-50));
             if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()>=550){
-            pontosequipa2();
+                pontosequipa2();
+                setLocation(402,340);
             }
             if(isTouching(Rede.class)){
                 pontosequipa2();
+                setLocation(402,340);
             }
         }
     }else if(isTouching(Ken.class)){
@@ -113,26 +115,32 @@ private void moveBola(){
             setLocation(x-Greenfoot.getRandomNumber(getWorld().getWidth()-100),y-Greenfoot.getRandomNumber(getWorld().getHeight()-100));
             if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()>=550){
             pontosequipa2();
+            setLocation(402,340);
             }
             if(isTouching(Rede.class)){
                 pontosequipa2();
+                setLocation(402,340);
             }
         }
     }else if(isTouching(Jogadora1.class)){
         setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
         if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()<=600){
             contapontos();
+            setLocation(784,309);
         }
         if(isTouching(Rede.class)){
                 contapontos();
+                setLocation(784,309);
         }
     }else if(isTouching(Jogadora2.class)){
         setLocation(x+Greenfoot.getRandomNumber(getWorld().getWidth()-100),y+Greenfoot.getRandomNumber(getWorld().getHeight()+100));
         if(getX()>=1050 || getX()<=150 || getY() <= 100 || getY() >= 650 ||getX()<=600){
             contapontos();
+            setLocation(784,309);
         }
         if(isTouching(Rede.class)){
             contapontos();
+            setLocation(784,309);
         }
     }
 }
@@ -177,6 +185,9 @@ public void passarnivel(){
     }else if(getWorld() instanceof Tenis){
          if(golos==golosMarcar || pontos == golosMarcar){
              if(pontos >= golos){
+                 Greenfoot.delay(5);
+                 getWorld().showText("Perdeu o jogo ", 600,350);
+                 Greenfoot.delay(5);
                  Greenfoot.setWorld(new Tenis());
          }else if(pontos < golos){
             Greenfoot.setWorld(new CorridaDeCarros());
