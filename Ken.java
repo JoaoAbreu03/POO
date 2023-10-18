@@ -25,10 +25,11 @@ public class Ken extends Jogadores
      */
     public void act()
     {
-        moveKen();
+        //moveKen();
+        movePlayer( "A", "D", "W", "S");
         mudar();
     }
-    public void moveKen(){
+    /*public void moveKen(){
         int x = getX();
         int y = getY();
  
@@ -44,7 +45,7 @@ public class Ken extends Jogadores
         else if(Greenfoot.isKeyDown("S")){
             setLocation(x, y+2);
         }
-    }
+    }*/
     public void mudar(){
         if (getWorld() instanceof Futebol) {
             setImage(imagem1);

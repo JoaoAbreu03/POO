@@ -159,13 +159,13 @@ private void contapontos(){
         }
     }else if(getWorld() instanceof Tenis){
             golos=golos+1;
-            getWorld().showText("Equipa 1: "+golos, 100,650);
+            getWorld().showText("Equipa Barbie: "+golos, 400,650);
             Greenfoot.delay(5);
     } 
     }
 private void pontosequipa2(){
             pontos=pontos+1;
-            getWorld().showText("Equipa 2: "+pontos, 400,650);
+            getWorld().showText("Equipa 2 : "+pontos, 100,650);
             Greenfoot.delay(5);
     }
 public void mudar(){

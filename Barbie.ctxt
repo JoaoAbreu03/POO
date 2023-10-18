@@ -7,7 +7,6 @@ comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Barbie\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment3.params=
-comment3.target=void\ moveBarbie()
-comment4.params=
-comment4.target=void\ mudar()
-numComments=5
+comment3.target=void\ mudar()
+comment3.text=public\ void\ moveBarbie(){\r\n\ \ \ \ \ \ \ \ int\ x\ \=\ getX();\r\n\ \ \ \ \ \ \ \ int\ y\ \=\ getY();\r\n\ \r\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown("left")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x-2,\ y);\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }else\ if(Greenfoot.isKeyDown("right")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x+2,\ y);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\ if(Greenfoot.isKeyDown("up")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x,\ y-2);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\ if(Greenfoot.isKeyDown("down")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x,\ y+2);\r\n\ \ \ \ \ \ \ \ }\r\n}
+numComments=4
