@@ -15,6 +15,7 @@ public class Jogadores extends Actor
     public void act()
     {
         // Add your action code here.
+        
     }
      public void mudar(){
         if (getWorld() instanceof Futebol) {
