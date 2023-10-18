@@ -8,4 +8,6 @@ comment2.params=r\ g\ b
 comment2.target=void\ pintaMundo(int,\ int,\ int)
 comment3.params=
 comment3.target=void\ populate()
-numComments=4
+comment4.params=
+comment4.target=void\ equipa()
+numComments=5

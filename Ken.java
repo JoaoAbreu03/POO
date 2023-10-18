@@ -54,7 +54,7 @@ public class Ken extends Jogadores
         }
         
     }
-    private void hitMurro(){
+    public void hitMurro(){
         int x = getX();
         int y = getY();
 

@@ -55,7 +55,7 @@ public class Barbie extends Jogadores
         }
         
     }
-    private void hitMurro(){
+    public void hitMurro(){
         int x = getX();
         int y = getY();
 
@@ -75,5 +75,5 @@ public class Barbie extends Jogadores
             }
         }
     }
-    }
+}
 
