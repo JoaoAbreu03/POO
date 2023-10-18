@@ -8,17 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tenis extends World
 {
-
+    private int  equipa, jogador;
     /**
      * Constructor for objects of class Tenis.
      * 
      */
     public Tenis()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
         pintaMundo(0,128,0);
-        //showText("Tenis",200,300);
         populate();
     }
     private void pintaMundo(int r,int g, int b){
@@ -28,13 +26,34 @@ public class Tenis extends World
         fundo.fill();
     }
     private void populate(){
-        
-       addObject(new Barbie(),944,149);
-        
+        addObject(new Margem(),607,335);
+        addObject(new Barbie(),944,149);
         addObject(new Ken(),944,476);
         addObject(new Jogadora1(),181,149);
         addObject(new Jogadora2(),174,476);
         addObject(new Rede(),600,350);
-        addObject(new Bola(),400,350);
+        equipa();
+        //addObject(new Bola(),400,350);
     }
+    public void equipa(){
+    equipa=Greenfoot.getRandomNumber(2)+1;
+    //jogador=Greenfoot.getRandomNumber(2)+1;
+    //equipa 1 barbie e ken
+    if(equipa==1){
+        //jogador1 barbie
+        //if(jogador==1){
+            addObject(new Bola(),784,309);
+        //jogador2 ken  
+       // }else if(jogador==2){
+          // addObject(new Bola(),944,476);
+        ///}
+        //equipa 2 jogadora1 e jogadora 2
+    }else if(equipa==2){
+        //if(jogador==1){
+           addObject(new Bola(),402,340);
+       // }else if(jogador==2){
+           // addObject(new Bola(),174,476);
+       // }
+    }
+}
 }

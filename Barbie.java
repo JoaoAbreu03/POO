@@ -26,11 +26,12 @@ public class Barbie extends Jogadores
      */
     public void act()
     {
-        moveBarbie();
+        //moveBarbie();
+        movePlayer( "left", "right", "up", "down");
         mudar();
        
     }
-    public void moveBarbie(){
+    /*public void moveBarbie(){
         int x = getX();
         int y = getY();
  
@@ -46,7 +47,7 @@ public class Barbie extends Jogadores
         else if(Greenfoot.isKeyDown("down")){
             setLocation(x, y+2);
         }
-    }
+    }*/
     public void mudar(){
         if (getWorld() instanceof Futebol) {
             setImage(imagem1);

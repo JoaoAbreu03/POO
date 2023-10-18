@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Jogadores extends Actor
 {   GreenfootImage imagem1,imagem2;
+  
+    //string up,down,left, right;
     /**
      * Act - do whatever the Jogadores wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,13 +18,31 @@ public class Jogadores extends Actor
     {
         // Add your action code here.
     }
-     public void mudar(){
+     /*public void mudar(){
         if (getWorld() instanceof Futebol) {
             setImage(imagem1);
         }else if(getWorld() instanceof Tenis){
             setImage(imagem2);
         }
         
+    }*/
+    public void movePlayer( String left, String right, String up, String down){
+        
+        int x = getX();
+        int y = getY();
+ 
+        if(Greenfoot.isKeyDown(left)){
+            setLocation(x-2, y);
+        
+        }else if(Greenfoot.isKeyDown(right)){
+            setLocation(x+2, y);
+        }
+        else if(Greenfoot.isKeyDown(up)){
+            setLocation(x, y-2);
+        }
+        else if(Greenfoot.isKeyDown(down)){
+            setLocation(x, y+2);
+        }        
     }
     
 }
