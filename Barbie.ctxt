@@ -10,3 +10,9 @@ comment3.params=
 comment3.target=void\ mudar()
 comment3.text=public\ void\ moveBarbie(){\r\n\ \ \ \ \ \ \ \ int\ x\ \=\ getX();\r\n\ \ \ \ \ \ \ \ int\ y\ \=\ getY();\r\n\ \r\n\ \ \ \ \ \ \ \ if(Greenfoot.isKeyDown("left")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x-2,\ y);\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }else\ if(Greenfoot.isKeyDown("right")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x+2,\ y);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\ if(Greenfoot.isKeyDown("up")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x,\ y-2);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\ if(Greenfoot.isKeyDown("down")){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setLocation(x,\ y+2);\r\n\ \ \ \ \ \ \ \ }\r\n}
 numComments=4
+comment3.target=void\ moveBarbie()
+comment4.params=
+comment4.target=void\ mudar()
+comment5.params=
+comment5.target=void\ hitMurro()
+numComments=6

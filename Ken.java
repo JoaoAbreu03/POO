@@ -28,6 +28,7 @@ public class Ken extends Jogadores
         //moveKen();
         movePlayer( "A", "D", "W", "S");
         mudar();
+        hitMurro();
     }
     /*public void moveKen(){
         int x = getX();
@@ -53,5 +54,25 @@ public class Ken extends Jogadores
             setImage(imagem2);
         }
         
+    }
+    private void hitMurro(){
+        int x = getX();
+        int y = getY();
+
+        if (isTouching(murro.class))
+        {
+            if(Greenfoot.isKeyDown("left")){
+            setLocation(x+2, y);
+        
+            }else if(Greenfoot.isKeyDown("right")){
+                setLocation(x-2, y);
+            }
+            else if(Greenfoot.isKeyDown("up")){
+                setLocation(x, y+2);
+            }
+            else if(Greenfoot.isKeyDown("down")){
+                setLocation(x, y-2);
+            }
+        }
     }
 }
