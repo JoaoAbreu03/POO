@@ -160,13 +160,13 @@ private void contapontos(){
     }else if(getWorld() instanceof Tenis){
             golos=golos+1;
             getWorld().showText("Equipa Barbie: "+golos, 400,650);
-            Greenfoot.delay(5);
+            Greenfoot.delay(10);
     } 
     }
 private void pontosequipa2(){
             pontos=pontos+1;
             getWorld().showText("Equipa 2 : "+pontos, 100,650);
-            Greenfoot.delay(5);
+            Greenfoot.delay(10);
     }
 public void mudar(){
     if (getWorld() instanceof Futebol) {
@@ -185,9 +185,9 @@ public void passarnivel(){
     }else if(getWorld() instanceof Tenis){
          if(golos==golosMarcar || pontos == golosMarcar){
              if(pontos >= golos){
-                 Greenfoot.delay(5);
+                 Greenfoot.delay(15);
                  getWorld().showText("Perdeu o jogo ", 600,350);
-                 Greenfoot.delay(5);
+                 Greenfoot.delay(15);
                  Greenfoot.setWorld(new Tenis());
          }else if(pontos < golos){
             Greenfoot.setWorld(new CorridaDeCarros());
