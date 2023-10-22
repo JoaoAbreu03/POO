@@ -31,7 +31,6 @@ public class Jogadores extends Actor
         
         int x = getX();
         int y = getY();
- 
         if(Greenfoot.isKeyDown(left)){
             setLocation(x-2, y);
         
@@ -44,6 +43,24 @@ public class Jogadores extends Actor
         else if(Greenfoot.isKeyDown(down)){
             setLocation(x, y+2);
         }        
+    }
+    public void hitMurro( String left, String right, String up, String down){
+        int x = getX();
+        int y = getY();
+        if (isTouching(murro.class) || isTouching(murro_pequeno.class))
+        {
+            if(Greenfoot.isKeyDown(left)){
+                setLocation(x+2, y);           
+            }else if(Greenfoot.isKeyDown(right)){
+                setLocation(x-2, y);
+            }
+            else if(Greenfoot.isKeyDown(up)){
+                setLocation(x, y+2  );
+            }
+            else if(Greenfoot.isKeyDown(down)){
+                setLocation(x, y-2);
+            }
+        }
     }
     
 }

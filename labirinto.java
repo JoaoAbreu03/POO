@@ -16,23 +16,17 @@ public class labirinto extends World
     public labirinto()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1400, 1000, 1); 
+        super(1200, 700, 1); 
         pintaMundo(0,0,0);
         populate();
     }
     private void populate(){
         
-       addObject(new Barbie(),200,900);
-       addObject(new Ken(),1200,900);
-     
-       int d = 100;
-      
-       for ( int i= 0; i < 5; i++ ){
-           murro m = new murro();
-           m.setRotation(90);
-           addObject(m,700,d);
-           d = d + 200;
-       }
+       addObject(new Barbie(),200,630);
+       addObject(new Ken(),1000,630);
+       construirLabririnto();
+       addObject(new ganhar_butao(), 1150, 250);
+       addObject(new ganhar_butao(), 50, 250);
        
     }
     private void pintaMundo(int r,int g, int b){
@@ -40,5 +34,76 @@ public class labirinto extends World
         Color cor = new Color(r,g,b);
         fundo.setColor(cor);
         fundo.fill();
+    }
+    
+    private void construirLabririnto(){
+       
+       // cria a barreira para dividir o mapa 
+       int d = 100;
+      
+       for ( int i= 0; i < 5; i++ ){
+           murro m = new murro();
+           m.setRotation(90);
+           addObject(m,600,d);
+           d = d + 200;
+       }
+       
+       d = 250;
+       for ( int i= 0; i < 5; i++ ){
+           murro m = new murro();
+           addObject(m,d,530);
+           d = d + 175;
+       }
+       
+       d = 150;
+       for ( int i= 0; i < 2; i++ ){
+           murro m = new murro();
+           addObject(m,d,330);
+           d = d + 175;
+       }
+       
+       //enconstado a parede do lado do ken
+       /*
+       d = 777;
+       for ( int i= 0; i < 2; i++ ){
+           murro m = new murro();
+           addObject(m,d,330);
+           d = d + 175;
+       }
+       */
+      
+       d = 880;
+       for ( int i= 0; i < 2; i++ ){
+           murro m = new murro();
+           addObject(m,d,330);
+           d = d + 175;
+       }
+       
+       d = 445;
+       for ( int i= 0; i < 2; i++ ){
+           murro_pequeno m = new murro_pequeno();
+           m.setRotation(90);
+           addObject(m,d,222);
+           d = d - 300;
+       }
+       murro m4 = new murro();
+       m4.setRotation(90);
+       addObject(m4,305  ,15);
+       
+       d = 755;
+       for ( int i= 0; i < 2; i++ ){
+           murro_pequeno m = new murro_pequeno();
+           m.setRotation(90);      
+           addObject(m,d,222);
+           d = d + 300;
+       }
+       
+       
+       murro m3 = new murro();
+       m3.setRotation(90);
+       addObject(m3,900  ,10);
+       
+       
+       
     }
 }

@@ -8,4 +8,6 @@ comment2.params=
 comment2.target=void\ populate()
 comment3.params=r\ g\ b
 comment3.target=void\ pintaMundo(int,\ int,\ int)
-numComments=4
+comment4.params=
+comment4.target=void\ construirLabririnto()
+numComments=5
