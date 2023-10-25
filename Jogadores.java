@@ -7,8 +7,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Jogadores extends Actor
-{   GreenfootImage imagem1,imagem2;
-  
+{   
+    GreenfootImage imagem1,imagem2;
+    int vida = 3;
     //string up,down,left, right;
     /**
      * Act - do whatever the Jogadores wants to do. This method is called whenever
@@ -62,5 +63,12 @@ public class Jogadores extends Actor
             }
         }
     }
-    
+    public void verificarVida(){
+        if(isTouching(adversario.class)){
+            vida  -= 1; 
+            if(vida <= 0){
+                int a = 0;
+            }
+        }
+    }
 }

@@ -17,7 +17,7 @@ public class Ken extends Jogadores
         imagem1.scale(witdth/4,height/4);
         imagem2= new GreenfootImage("kentenisladooraquete.png");
         imagem2.scale(witdth/4,height/4);
-
+        
     }
     /**
      * Act - do whatever the Ken wants to do. This method is called whenever
@@ -29,6 +29,7 @@ public class Ken extends Jogadores
         movePlayer( "A", "D", "W", "S");
         mudar();
         hitMurro("A", "D", "W", "S");
+        verificarVida();
     }
     /*public void moveKen(){
         int x = getX();

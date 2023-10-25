@@ -9,4 +9,6 @@ comment2.target=void\ movePlayer(java.lang.String,\ java.lang.String,\ java.lang
 comment2.text=public\ void\ mudar(){\r\n\ \ \ \ \ \ \ \ if\ (getWorld()\ instanceof\ Futebol)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(imagem1);\r\n\ \ \ \ \ \ \ \ }else\ if(getWorld()\ instanceof\ Tenis){\r\n\ \ \ \ \ \ \ \ \ \ \ \ setImage(imagem2);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n}
 comment3.params=left\ right\ up\ down
 comment3.target=void\ hitMurro(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-numComments=4
+comment4.params=
+comment4.target=void\ verificarVida()
+numComments=5

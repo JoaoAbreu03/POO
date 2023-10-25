@@ -19,6 +19,7 @@ public class Barbie extends Jogadores
         imagem1.scale(witdth/4,height/4);
         imagem2= new GreenfootImage("barbietenisladooraquete.png");
         imagem2.scale(witdth/4,height/4);
+        
     }
     /**
      * Act - do whatever the Barbie wants to do. This method is called whenever
@@ -30,6 +31,7 @@ public class Barbie extends Jogadores
         movePlayer( "left", "right", "up", "down");
         mudar();
         hitMurro( "left", "right", "up", "down");
+        verificarVida();
     }
     /*public void moveBarbie(){
         int x = getX();
@@ -57,5 +59,5 @@ public class Barbie extends Jogadores
         
     }
     
-    }
+}
 

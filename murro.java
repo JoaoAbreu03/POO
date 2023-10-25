@@ -6,34 +6,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class murro extends Actor
+public class murro extends murros
 {
     /**
      * Act - do whatever the murro wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private boolean bool  = false;
     public void act()
     {
         // Add your action code here.
+        if(bool)
         
-        //muda a transparencia dos murros quando algum jogar bate no murro
-        mudarTransparencia();
-        
+            mudarTransparencia(bool);
+        else
+            mudarTransparencia();
     }
-    public void mudarTransparencia(){
-      GreenfootImage imagem = getImage();
-        int alpha = imagem.getTransparency();
-        if(isTouching(Ken.class) || isTouching(Barbie.class)){
-            alpha = 255;
-            imagem.setTransparency(alpha);
-            
-        }else{
-            
-            alpha = imagem.getTransparency();  
-            if(alpha >= 5)
-                imagem.setTransparency(alpha - 5);
-        }  
+    public void murro(boolean t)
+    {
+        // Add your action code here.
+        bool = t;
+        mudarTransparencia(t);   
     }
-
-    
 }
