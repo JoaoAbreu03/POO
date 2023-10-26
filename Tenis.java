@@ -18,6 +18,10 @@ public class Tenis extends World
         super(1200, 700, 1); 
         pintaMundo(0,128,0);
         populate();
+         // o 60 e o tempo que demora um ciclo
+        timer timer = new timer(40 * 60); 
+        addObject(timer, 0, 0);
+    
         //Instancia do mundo futebol para aceder as vidas
         //Futebol futebol = new Futebol();
         //Aceder as vidas do ken e da barbie

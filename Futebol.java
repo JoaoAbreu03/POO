@@ -20,7 +20,10 @@ public class Futebol extends World
        super(1200, 700, 1);  
        //cronometro=new Cronometro();
        // addObject(new Cronometro(100), 400, 200); // Create a timer that lasts for 100 act cycles
-        
+         // o 60 e o tempo que demora um ciclo
+        timer timer = new timer(40 * 60); 
+        addObject(timer, 0, 0);
+           
        atores();
     }
      /*public Vidas getVidas() {

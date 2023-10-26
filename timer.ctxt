@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=timer
+comment0.text=\r\n\ \r\nWrite\ a\ description\ of\ class\ timer\ here.\r\n@author\ (your\ name)\r\n@version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=targetTime
 comment1.target=timer(int)
 comment2.params=
