@@ -68,6 +68,7 @@ public class Jogadores extends Actor
             vida  -= 1; 
             if(vida <= 0){
                 int a = 0;
+                Greenfoot.setWorld(new labirinto());
             }
         }
     }
