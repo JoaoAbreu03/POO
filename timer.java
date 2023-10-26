@@ -9,11 +9,11 @@ Write a description of class timer here.
 
 
 public class timer extends Actor {
-    private int timer; 
-
+    private int timer;
+    
+    //contrutor
     public timer(int targetTime) {
         this.timer = targetTime;
-        
     }
 
     public void act() {

@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Jogadores extends Actor
 {   
     GreenfootImage imagem1,imagem2;
+    
+    //variavel usada para contar as vidas
     protected int vida = 3;
     
     //string up,down,left, right;
@@ -46,6 +48,8 @@ public class Jogadores extends Actor
             setLocation(x, y+2);
         }        
     }
+    
+    //sempre que ele bate em um murro obriga a personagem a parar
     public void hitMurro( String left, String right, String up, String down){
         int x = getX();
         int y = getY();
@@ -65,6 +69,7 @@ public class Jogadores extends Actor
             }
         }
     }
+    //verifica se as vidas dos jogadores ja acabaram
     public void verificarVida(){
         if(isTouching(adversario.class)){
             vida  -= 1; 
@@ -76,6 +81,7 @@ public class Jogadores extends Actor
         
     }
     
+    //retorna o valor da vida atualizado
     public int getVida(){
         return this.vida;
     }

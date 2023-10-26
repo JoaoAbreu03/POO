@@ -15,16 +15,15 @@ public class murro_pequeno extends murros
     private boolean bool  = false;
     public void act()
     {
-        // Add your action code here.
         if(bool)
         
             mudarTransparencia(bool);
         else
             mudarTransparencia();
     }
+    //metodo para fazer com que a transparencia mude
     public void murro_pequeno(boolean t)
     {
-        // Add your action code here.
         bool = t;
         mudarTransparencia(t);   
     }

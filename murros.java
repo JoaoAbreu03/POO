@@ -33,7 +33,13 @@ public class murros extends obstaculos
     
     public void mudarTransparencia(boolean t){
         //nao ficar invisivel
-                
+        if(t){
+            GreenfootImage imagem = getImage();
+            int alpha = imagem.getTransparency();
+            alpha = 255;
+            imagem.setTransparency(alpha); 
+        }   
+               
     }
     
 

@@ -12,7 +12,7 @@ public class ganhar_butao extends Actor
      * Act - do whatever the ganhar_butao wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-   
+    boolean l2 = false;
     public void act()
     {
         // Add your action code here.
@@ -20,9 +20,13 @@ public class ganhar_butao extends Actor
         boolean b = isTouching(Barbie.class);
         //quando um deles chegar troca de mundo
         if(b || k ) {
-            // manda los para outro mundo
-            Greenfoot.setWorld(new labirinto2());
+            // manda los para outro mundo e se o 
+            if(!l2)
+                Greenfoot.setWorld(new labirinto2());
+            else
+                Greenfoot.setWorld(new Inicio());
         }
             
     }
+    
 }

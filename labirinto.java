@@ -8,20 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class labirinto extends World
 {
-
-    /**
-     * Constructor for objects of class labirinto.
-     * 
-     */
     public labirinto()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
+        //faco com que o background seja preto
         pintaMundo(0,0,0);
         //metodo que vai adicionar os objetos no mundo
         populate();
         
-        // o 60 e o tempo que demora um ciclo
+        // o 40s e 60 é o tempo que demora um ciclo
         timer timer = new timer(40 * 60); 
         addObject(timer, 0, 0);
     }
@@ -70,16 +65,6 @@ public class labirinto extends World
            d = d + 175;
        }
        
-       //enconstado a parede do lado do ken
-       /*
-       d = 777;
-       for ( int i= 0; i < 2; i++ ){
-           murro m = new murro();
-           addObject(m,d,330);
-           d = d + 175;
-       }
-       */
-      
        d = 880;
        for ( int i= 0; i < 2; i++ ){
            murro m = new murro();
@@ -111,8 +96,5 @@ public class labirinto extends World
        murro m3 = new murro();
        m3.setRotation(90);
        addObject(m3,900  ,10);
-       
-       
-       
     }
 }
