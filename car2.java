@@ -1,18 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class car1 here.
+ * Write a description of class car2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class car1 extends Actor
+public class car2 extends Actor
 {
     private GreenfootImage imgParaCima;
     private GreenfootImage imgParaBaixo;
     private GreenfootImage imgParaDireita;
     private GreenfootImage imgParaEsquerda;
-    private int speed = 5;
+    private int speed = 15;
 
     /**
      * Act - do whatever the car1 wants to do. This method is called whenever
@@ -20,8 +20,7 @@ public class car1 extends Actor
      */
     public void act()
     {
-        movePlayer( "A", "D", "W", "S");
-        //sairPista();
+        movePlayer( "left", "right", "up", "down");
     }
     
     public void movePlayer( String left, String right, String up, String down){
@@ -29,38 +28,29 @@ public class car1 extends Actor
         int x = getX();
         int y = getY();
         if(Greenfoot.isKeyDown(left)){
-            setLocation(getX()-speed, getY());
+            setLocation(getX()-5, getY());
             setImage(imgParaEsquerda);
         }
         if(Greenfoot.isKeyDown(right)){
-            setLocation(getX()+speed, getY());
+            setLocation(getX()+5, getY());
             setImage(imgParaDireita);
         }
         
         if(Greenfoot.isKeyDown(up)){
-            setLocation(getX(), getY() - speed);
+            setLocation(getX(), getY() - 5);
             setImage(imgParaCima);
         }
         
         if(Greenfoot.isKeyDown(down)){
-            setLocation(getX(), getY() + speed);
+            setLocation(getX(), getY() + 5);
             setImage(imgParaBaixo);
         }
     }
-    
-    /*public void sairPista(){
-        if(isTouching(pistaSemFundo.class)){
-            speed=15;
-        }else{
-            speed=2;
-        }
-    }*/
-    
-    public car1(){
-        imgParaCima = new GreenfootImage("car1_cima.png");
-        imgParaBaixo = new GreenfootImage("car1_baixo.png");
-        imgParaDireita = new GreenfootImage("car1_direita.png");
-        imgParaEsquerda = new GreenfootImage("car1_esquerda.png");
+    public car2(){
+        imgParaCima = new GreenfootImage("car2_cima.png");
+        imgParaBaixo = new GreenfootImage("car2_baixo.png");
+        imgParaDireita = new GreenfootImage("car2_direita.png");
+        imgParaEsquerda = new GreenfootImage("car2_esquerda.png");
         
         setImage(imgParaDireita); // imagem inicial
     }

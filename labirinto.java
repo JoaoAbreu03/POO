@@ -18,6 +18,7 @@ public class labirinto extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
         pintaMundo(0,0,0);
+        //metodo que vai adicionar os objetos no mundo
         populate();
         
         // o 60 e o tempo que demora um ciclo
@@ -28,6 +29,7 @@ public class labirinto extends World
         
        addObject(new Barbie(),200,630);
        addObject(new Ken(),1000,630);
+       //cria os lambirintos
        construirLabririnto();
        
        ganhar_butao b2 = new ganhar_butao();

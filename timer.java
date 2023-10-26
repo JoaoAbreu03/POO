@@ -9,25 +9,25 @@ Write a description of class timer here.
 
 
 public class timer extends Actor {
-    private int timer; // Timer in seconds
-    private int targetTime; // The target time in seconds to count down from
-    private int countdownDelay; // Delay in milliseconds
+    private int timer; 
 
     public timer(int targetTime) {
-        this.targetTime = targetTime;
         this.timer = targetTime;
-        this.countdownDelay = 1000; // 1000 milliseconds = 1 second
+        
     }
 
     public void act() {
         if (timer > 0) {
+            //reduz o tempo
             timer--;
+            // converte o tempo para segundos
             int tempo = timer/60;
+            //mostra o tempo restante no mundo
             getWorld().showText("tempo restante: " + tempo + " sec", 110, 50);
 
-            // Delay for 1 second (1000 milliseconds)
+            
         } else {
-            // The countdown timer has reached 0, perform your action here
+            // quando o tempo acaba e ele ainda nao passou o nivel acaba o munndo
             Greenfoot.setWorld(new GameOver());
         }
     }
