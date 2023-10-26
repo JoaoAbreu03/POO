@@ -8,9 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Futebol extends World
 {
-    public int vidaBarbie=3;
-    public int vidaKen=3;
-    
+    /*public int vidaBarbie=3;
+    public int vidaKen=3;*/
+    private Cronometro cronometro;
     /**
      * Constructor for objects of class Futebol.
      * 
@@ -18,13 +18,24 @@ public class Futebol extends World
     public Futebol()
     {    
        super(1200, 700, 1);  
+       //cronometro=new Cronometro();
+        addObject(new Cronometro(100), 400, 200); // Create a timer that lasts for 100 act cycles
+        
        atores();
     }
-     public Vidas getVidas() {
+     /*public Vidas getVidas() {
         return new Vidas (vidaKen,vidaBarbie);
-    }
+    }*/
     public void act(){
-        verificavida();
+        //verificavida();
+        /*cronometro=new Cronometro();
+        
+        cronometro.act();
+        showText("Tempo: "+cronometro.getTempoAtual(), 100,50);
+        if(cronometro.getTempoAtual()>=40){
+           Greenfoot.setWorld(new GameOver());
+        }*/
+        cronometro=new Cronometro(10);
     }
     
     private void atores(){
@@ -34,11 +45,13 @@ public class Futebol extends World
         addObject(new Barbie(),360,570);
         addObject(new Ken(),340,540);
         addObject(new Guarda(),615,225);
-        showText("Vida Barbie: "+vidaBarbie, 100,50);
-        showText("Vida Ken: "+vidaKen, 1100,50);
+       
+        //addObject(new Cronometro(40, 200));
+        //showText("Vida Barbie: "+vidaBarbie, 100,50);
+        //showText("Vida Ken: "+vidaKen, 1100,50);
         
     }
-    public void vidaBarbie(int vida){
+    /*public void vidaBarbie(int vida){
         //1 true ou seja ganhou vida
         if(vida==1){
             vidaBarbie=vidaBarbie+1;
@@ -49,8 +62,8 @@ public class Futebol extends World
             showText("Vida Barbie: "+vidaBarbie, 100,50);
         }
         
-    }
-    public void vidaKen( int vida){
+    }*/
+    /*public void vidaKen( int vida){
         if(vida==1){
              vidaKen=vidaKen+1;
             showText("Vida Ken: "+vidaKen, 1100,50);
@@ -59,8 +72,8 @@ public class Futebol extends World
             showText("Vida Ken: "+vidaKen, 1100,50);
         }
         
-    }
-    public void verificavida(){
+    }*/
+    /*public void verificavida(){
         //verifica se a vida da Barbie ou do Ken é iguala zero
         if(vidaKen==0 || vidaBarbie==0){
             //se a vida do ken for 0 e a da barbie for maior que 1 ela doa uma vida ao ken
@@ -80,5 +93,5 @@ public class Futebol extends World
                 Greenfoot.setWorld(new GameOver());
             }
         }
-    }
+    }*/
 }

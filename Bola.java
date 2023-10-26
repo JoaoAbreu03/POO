@@ -11,7 +11,7 @@ public class Bola extends Actor
 private int golos, golosMarcar, equipa, jogador,pontos;
 private boolean numeroPontosGerado=false;
 GreenfootImage bola1,bola2;
-private int random;
+//private int random;
 public Bola(){
     GreenfootImage image = getImage();
     int witdth = image.getWidth();
@@ -48,7 +48,7 @@ private void moveBola(){
     Actor ken=getOneIntersectingObject(Ken.class);
     int x =  getX();
     int y = getY();
-    random=Greenfoot.getRandomNumber(2);
+   
     if(isTouching(Barbie.class)){
         
         int xbarbie = barbie.getX();
@@ -150,21 +150,11 @@ private void contapontos(){
     if(getWorld() instanceof Futebol){
         if(isTouching(Guarda.class)){
             Greenfoot.playSound("naah.mp3");
-           if(random==0){
-                getWorldOfType(Futebol.class).vidaBarbie(0);
-           }else if(random==1){
-                getWorldOfType(Futebol.class).vidaKen(0);
-            }
-            
             Greenfoot.delay(5);
             setLocation(650,550);
         }else if(isTouching(Baliza.class)){
             Greenfoot.playSound("siuuu.mp3");
-            if(random==0){
-                getWorldOfType(Futebol.class).vidaBarbie(1);
-            }else if(random==1){
-                getWorldOfType(Futebol.class).vidaKen(1);
-            }
+            
             golos=golos+1;
             getWorld().showText("Golos: "+golos, 100,650);
             Greenfoot.delay(5);
