@@ -11,6 +11,4 @@ comment3.params=left\ right\ up\ down
 comment3.target=void\ hitMurro(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
 comment4.params=
 comment4.target=void\ verificarVida()
-comment5.params=
-comment5.target=int\ getVida()
-numComments=6
+numComments=5

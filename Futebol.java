@@ -10,7 +10,7 @@ public class Futebol extends World
 {
     /*public int vidaBarbie=3;
     public int vidaKen=3;*/
-    private Cronometro cronometro;
+    //private Cronometro cronometro;
     /**
      * Constructor for objects of class Futebol.
      * 
@@ -19,7 +19,7 @@ public class Futebol extends World
     {    
        super(1200, 700, 1);  
        //cronometro=new Cronometro();
-        addObject(new Cronometro(100), 400, 200); // Create a timer that lasts for 100 act cycles
+       // addObject(new Cronometro(100), 400, 200); // Create a timer that lasts for 100 act cycles
         
        atores();
     }
@@ -35,7 +35,7 @@ public class Futebol extends World
         if(cronometro.getTempoAtual()>=40){
            Greenfoot.setWorld(new GameOver());
         }*/
-        cronometro=new Cronometro(10);
+        //cronometro=new Cronometro(10);
     }
     
     private void atores(){
