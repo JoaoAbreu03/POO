@@ -18,6 +18,16 @@ public class Tenis extends World
         super(1200, 700, 1); 
         pintaMundo(0,128,0);
         populate();
+        //Instancia do mundo futebol para aceder as vidas
+        Futebol futebol = new Futebol();
+        //Aceder as vidas do ken e da barbie
+        Vidas vidasfutebol=futebol.getVidas();
+        
+        int vidaBarbie=vidasfutebol.getVidaBarbie();
+        int vidaKen=vidasfutebol.getVidaKen();
+        showText("Vida Barbie: "+vidaBarbie, 100,50);
+        showText("Vida Ken: "+vidaKen, 1100,50);
+        futebol.verificavida();
     }
     private void pintaMundo(int r,int g, int b){
         GreenfootImage fundo= getBackground();
