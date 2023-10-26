@@ -23,6 +23,7 @@ class.ganhar_butao.image=button-purple.png
 class.murro.image=brick.jpg
 class.murro_pequeno.image=murro_pequeno.jpg
 class.recomecar.image=recomecartexto.png
+<<<<<<< Updated upstream
 dependency1.from=Inicio
 dependency1.to=Fundo
 dependency1.type=UsesDependency
@@ -121,10 +122,111 @@ dependency38.to=Tenis
 dependency38.type=UsesDependency
 dependency39.from=murro
 dependency39.to=Ken
+=======
+dependency1.from=labirinto2
+dependency1.to=Ken
+dependency1.type=UsesDependency
+dependency10.from=Inicio
+dependency10.to=Play
+dependency10.type=UsesDependency
+dependency11.from=CorridaDeCarros
+dependency11.to=car1
+dependency11.type=UsesDependency
+dependency12.from=GameOver
+dependency12.to=GameOvertexto
+dependency12.type=UsesDependency
+dependency13.from=GameOver
+dependency13.to=recomecar
+dependency13.type=UsesDependency
+dependency14.from=GameOver
+dependency14.to=PontuacaoTexto
+dependency14.type=UsesDependency
+dependency15.from=Tenis
+dependency15.to=Futebol
+dependency15.type=UsesDependency
+dependency16.from=Tenis
+dependency16.to=Vidas
+dependency16.type=UsesDependency
+dependency17.from=Tenis
+dependency17.to=Margem
+dependency17.type=UsesDependency
+dependency18.from=Tenis
+dependency18.to=Barbie
+dependency18.type=UsesDependency
+dependency19.from=Tenis
+dependency19.to=Ken
+dependency19.type=UsesDependency
+dependency2.from=labirinto2
+dependency2.to=Barbie
+dependency2.type=UsesDependency
+dependency20.from=Tenis
+dependency20.to=Jogadora1
+dependency20.type=UsesDependency
+dependency21.from=Tenis
+dependency21.to=Jogadora2
+dependency21.type=UsesDependency
+dependency22.from=Tenis
+dependency22.to=Rede
+dependency22.type=UsesDependency
+dependency23.from=Tenis
+dependency23.to=Bola
+dependency23.type=UsesDependency
+dependency24.from=labirinto
+dependency24.to=timer
+dependency24.type=UsesDependency
+dependency25.from=labirinto
+dependency25.to=Barbie
+dependency25.type=UsesDependency
+dependency26.from=labirinto
+dependency26.to=Ken
+dependency26.type=UsesDependency
+dependency27.from=labirinto
+dependency27.to=ganhar_butao
+dependency27.type=UsesDependency
+dependency28.from=labirinto
+dependency28.to=murro
+dependency28.type=UsesDependency
+dependency29.from=labirinto
+dependency29.to=murro_pequeno
+dependency29.type=UsesDependency
+dependency3.from=labirinto2
+dependency3.to=aranha
+dependency3.type=UsesDependency
+dependency30.from=Futebol
+dependency30.to=Vidas
+dependency30.type=UsesDependency
+dependency31.from=Futebol
+dependency31.to=Baliza
+dependency31.type=UsesDependency
+dependency32.from=Futebol
+dependency32.to=Bola
+dependency32.type=UsesDependency
+dependency33.from=Futebol
+dependency33.to=Barbie
+dependency33.type=UsesDependency
+dependency34.from=Futebol
+dependency34.to=Ken
+dependency34.type=UsesDependency
+dependency35.from=Futebol
+dependency35.to=Guarda
+dependency35.type=UsesDependency
+dependency36.from=Futebol
+dependency36.to=GameOver
+dependency36.type=UsesDependency
+dependency37.from=recomecar
+dependency37.to=Futebol
+dependency37.type=UsesDependency
+dependency38.from=Jogadores
+dependency38.to=GameOver
+dependency38.type=UsesDependency
+dependency39.from=Jogadores
+dependency39.to=obstaculos
+>>>>>>> Stashed changes
 dependency39.type=UsesDependency
-dependency4.from=Inicio
-dependency4.to=Play
+dependency4.from=labirinto2
+dependency4.to=ganhar_butao
 dependency4.type=UsesDependency
+<<<<<<< Updated upstream
 dependency40.from=murro
 dependency40.to=Barbie
 dependency40.type=UsesDependency
@@ -195,6 +297,111 @@ editor.fx.0.y=-7
 height=830
 package.numDependencies=55
 package.numTargets=29
+=======
+dependency40.from=Jogadores
+dependency40.to=adversario
+dependency40.type=UsesDependency
+dependency41.from=Barbie
+dependency41.to=Futebol
+dependency41.type=UsesDependency
+dependency42.from=Barbie
+dependency42.to=Tenis
+dependency42.type=UsesDependency
+dependency43.from=Ken
+dependency43.to=Futebol
+dependency43.type=UsesDependency
+dependency44.from=Ken
+dependency44.to=Tenis
+dependency44.type=UsesDependency
+dependency45.from=timer
+dependency45.to=GameOver
+dependency45.type=UsesDependency
+dependency46.from=JogadoresExtra
+dependency46.to=Futebol
+dependency46.type=UsesDependency
+dependency47.from=JogadoresExtra
+dependency47.to=Tenis
+dependency47.type=UsesDependency
+dependency48.from=aranha
+dependency48.to=Ken
+dependency48.type=UsesDependency
+dependency49.from=aranha
+dependency49.to=Barbie
+dependency49.type=UsesDependency
+dependency5.from=labirinto2
+dependency5.to=murro
+dependency5.type=UsesDependency
+dependency50.from=aranha
+dependency50.to=murros
+dependency50.type=UsesDependency
+dependency51.from=murros
+dependency51.to=Ken
+dependency51.type=UsesDependency
+dependency52.from=murros
+dependency52.to=Barbie
+dependency52.type=UsesDependency
+dependency53.from=Play
+dependency53.to=Futebol
+dependency53.type=UsesDependency
+dependency54.from=ganhar_butao
+dependency54.to=labirinto2
+dependency54.type=UsesDependency
+dependency55.from=ganhar_butao
+dependency55.to=Ken
+dependency55.type=UsesDependency
+dependency56.from=ganhar_butao
+dependency56.to=Barbie
+dependency56.type=UsesDependency
+dependency57.from=Bola
+dependency57.to=Futebol
+dependency57.type=UsesDependency
+dependency58.from=Bola
+dependency58.to=Tenis
+dependency58.type=UsesDependency
+dependency59.from=Bola
+dependency59.to=CorridaDeCarros
+dependency59.type=UsesDependency
+dependency6.from=labirinto2
+dependency6.to=murro_pequeno
+dependency6.type=UsesDependency
+dependency60.from=Bola
+dependency60.to=Barbie
+dependency60.type=UsesDependency
+dependency61.from=Bola
+dependency61.to=Ken
+dependency61.type=UsesDependency
+dependency62.from=Bola
+dependency62.to=Rede
+dependency62.type=UsesDependency
+dependency63.from=Bola
+dependency63.to=Jogadora1
+dependency63.type=UsesDependency
+dependency64.from=Bola
+dependency64.to=Jogadora2
+dependency64.type=UsesDependency
+dependency65.from=Bola
+dependency65.to=Guarda
+dependency65.type=UsesDependency
+dependency66.from=Bola
+dependency66.to=Baliza
+dependency66.type=UsesDependency
+dependency7.from=Inicio
+dependency7.to=Fundo
+dependency7.type=UsesDependency
+dependency8.from=Inicio
+dependency8.to=Titulo
+dependency8.type=UsesDependency
+dependency9.from=Inicio
+dependency9.to=Subtitulo
+dependency9.type=UsesDependency
+editor.fx.0.height=737
+editor.fx.0.width=996
+editor.fx.0.x=356
+editor.fx.0.y=28
+height=838
+package.numDependencies=66
+package.numTargets=35
+>>>>>>> Stashed changes
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -217,70 +424,111 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
+<<<<<<< Updated upstream
 target10.name=Jogadora1
+=======
+target10.name=Inicio
+>>>>>>> Stashed changes
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
+<<<<<<< Updated upstream
 target11.height=70
 target11.name=PontuacaoTexto
+=======
+target11.height=30
+target11.name=JogadoresExtra
+>>>>>>> Stashed changes
 target11.showInterface=false
 target11.type=ClassTarget
-target11.width=120
+target11.width=60
 target11.x=0
 target11.y=0
 target12.height=70
+<<<<<<< Updated upstream
 target12.name=CorridaDeCarros
+=======
+target12.name=Jogadora2
+>>>>>>> Stashed changes
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
 target12.x=0
 target12.y=0
 target13.height=70
+<<<<<<< Updated upstream
 target13.name=Margem
+=======
+target13.name=Jogadora1
+>>>>>>> Stashed changes
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
 target13.x=0
 target13.y=0
 target14.height=70
+<<<<<<< Updated upstream
 target14.name=GameOver
+=======
+target14.name=PontuacaoTexto
+>>>>>>> Stashed changes
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=120
 target14.x=0
 target14.y=0
 target15.height=70
+<<<<<<< Updated upstream
 target15.name=Tenis
+=======
+target15.name=CorridaDeCarros
+>>>>>>> Stashed changes
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=120
 target15.x=0
 target15.y=0
 target16.height=70
+<<<<<<< Updated upstream
 target16.name=Baliza
+=======
+target16.name=Margem
+>>>>>>> Stashed changes
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
 target17.height=70
+<<<<<<< Updated upstream
 target17.name=labirinto
+=======
+target17.name=GameOver
+>>>>>>> Stashed changes
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=120
 target17.x=0
 target17.y=0
 target18.height=70
+<<<<<<< Updated upstream
 target18.name=murro
+=======
+target18.name=obstaculos
+>>>>>>> Stashed changes
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=120
 target18.x=0
 target18.y=0
 target19.height=70
+<<<<<<< Updated upstream
 target19.name=murro_pequeno
+=======
+target19.name=Tenis
+>>>>>>> Stashed changes
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=120
@@ -294,73 +542,118 @@ target2.width=120
 target2.x=0
 target2.y=0
 target20.height=70
+<<<<<<< Updated upstream
 target20.name=Play
+=======
+target20.name=Baliza
+>>>>>>> Stashed changes
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< Updated upstream
 target21.name=Futebol
+=======
+target21.name=murros
+>>>>>>> Stashed changes
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< Updated upstream
 target22.name=Rede
+=======
+target22.name=aranha
+>>>>>>> Stashed changes
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=120
 target22.x=0
 target22.y=0
+<<<<<<< Updated upstream
 target23.height=30
 target23.name=car1
+=======
+target23.height=70
+target23.name=labirinto
+>>>>>>> Stashed changes
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=60
 target23.x=0
 target23.y=0
 target24.height=70
+<<<<<<< Updated upstream
 target24.name=Ken
+=======
+target24.name=murro
+>>>>>>> Stashed changes
 target24.showInterface=false
 target24.type=ClassTarget
 target24.width=120
 target24.x=0
 target24.y=0
 target25.height=70
+<<<<<<< Updated upstream
 target25.name=Subtitulo
+=======
+target25.name=murro_pequeno
+>>>>>>> Stashed changes
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=120
 target25.x=0
 target25.y=0
 target26.height=70
+<<<<<<< Updated upstream
 target26.name=ganhar_butao
+=======
+target26.name=Play
+>>>>>>> Stashed changes
 target26.showInterface=false
 target26.type=ClassTarget
 target26.width=120
 target26.x=0
 target26.y=0
 target27.height=70
+<<<<<<< Updated upstream
 target27.name=Guarda
+=======
+target27.name=Futebol
+>>>>>>> Stashed changes
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=120
 target27.x=0
 target27.y=0
 target28.height=70
+<<<<<<< Updated upstream
 target28.name=Fundo
+=======
+target28.name=Rede
+>>>>>>> Stashed changes
 target28.showInterface=false
 target28.type=ClassTarget
 target28.width=120
 target28.x=0
 target28.y=0
+<<<<<<< Updated upstream
 target29.height=70
 target29.name=Bola
 target29.showInterface=false
 target29.type=ClassTarget
 target29.width=120
+=======
+target29.height=30
+target29.name=car1
+target29.showInterface=false
+target29.type=ClassTarget
+target29.width=60
+>>>>>>> Stashed changes
 target29.x=0
 target29.y=0
 target3.height=70
@@ -370,6 +663,48 @@ target3.type=ClassTarget
 target3.width=120
 target3.x=0
 target3.y=0
+target30.height=70
+target30.name=Ken
+target30.showInterface=false
+target30.type=ClassTarget
+target30.width=120
+target30.x=0
+target30.y=0
+target31.height=70
+target31.name=Subtitulo
+target31.showInterface=false
+target31.type=ClassTarget
+target31.width=120
+target31.x=0
+target31.y=0
+target32.height=70
+target32.name=ganhar_butao
+target32.showInterface=false
+target32.type=ClassTarget
+target32.width=120
+target32.x=0
+target32.y=0
+target33.height=70
+target33.name=Guarda
+target33.showInterface=false
+target33.type=ClassTarget
+target33.width=120
+target33.x=0
+target33.y=0
+target34.height=70
+target34.name=Fundo
+target34.showInterface=false
+target34.type=ClassTarget
+target34.width=120
+target34.x=0
+target34.y=0
+target35.height=70
+target35.name=Bola
+target35.showInterface=false
+target35.type=ClassTarget
+target35.width=120
+target35.x=0
+target35.y=0
 target4.height=70
 target4.name=Vidas
 target4.showInterface=false
@@ -385,28 +720,45 @@ target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< Updated upstream
 target6.name=Jogadores
+=======
+target6.name=adversario
+>>>>>>> Stashed changes
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
 target6.x=0
 target6.y=0
 target7.height=70
+<<<<<<< Updated upstream
 target7.name=Inicio
+=======
+target7.name=Jogadores
+>>>>>>> Stashed changes
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=120
 target7.x=0
 target7.y=0
+<<<<<<< Updated upstream
 target8.height=30
 target8.name=JogadoresExtra
+=======
+target8.height=70
+target8.name=timer
+>>>>>>> Stashed changes
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=60
 target8.x=0
 target8.y=0
 target9.height=70
+<<<<<<< Updated upstream
 target9.name=Jogadora2
+=======
+target9.name=labirinto2
+>>>>>>> Stashed changes
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
@@ -414,6 +766,10 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1550
+<<<<<<< Updated upstream
 world.lastInstantiated=Inicio
+=======
+world.lastInstantiated=labirinto
+>>>>>>> Stashed changes
 xPosition=0
 yPosition=0
