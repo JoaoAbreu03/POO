@@ -9,7 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Jogadores extends Actor
 {   
     GreenfootImage imagem1,imagem2;
-    int vida = 3;
+    protected int vida = 3;
+    
     //string up,down,left, right;
     /**
      * Act - do whatever the Jogadores wants to do. This method is called whenever
@@ -48,7 +49,8 @@ public class Jogadores extends Actor
     public void hitMurro( String left, String right, String up, String down){
         int x = getX();
         int y = getY();
-        if (isTouching(murro.class) || isTouching(murro_pequeno.class))
+        //sempre que tocar em um obstaculo para
+        if (isTouching(obstaculos.class))
         {
             if(Greenfoot.isKeyDown(left)){
                 setLocation(x+2, y);           
@@ -68,8 +70,13 @@ public class Jogadores extends Actor
             vida  -= 1; 
             if(vida <= 0){
                 int a = 0;
-                Greenfoot.setWorld(new labirinto());
+                Greenfoot.setWorld(new GameOver());
             }
         }
+        
+    }
+    
+    public int getVida(){
+        return this.vida;
     }
 }

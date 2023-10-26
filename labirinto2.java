@@ -13,21 +13,35 @@ public class labirinto2 extends World
      * Constructor for objects of class labirinto2.
      * 
      */
+    Ken k = new Ken();
+    Barbie b = new Barbie(); 
     public labirinto2()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1);
         populate();
+       
+        addObject(b,200,630);
+       
+        addObject(k,1000,630);
+        showText("Vida Barbie: " + b.getVida(), 100,50);
+     
+        showText("Vida Ken: " + k.getVida(), 1100,50);
+    }
+    public void act(){
+        showText("Vida Barbie: " + b.getVida(), 100,50);
+     
+       showText("Vida Ken: " + k.getVida(), 1100,50);
     }
     private void populate(){
-        
-       addObject(new Barbie(),200,630);
-       addObject(new Ken(),1000,630);
+       
        addObject(new aranha(),600,480);
        addObject(new aranha(),300,250);
        construirLabririnto();
        ganhar_butao b1 = new ganhar_butao();
        addObject(b1, 50, 250); 
+       
+          
        
     }
     private void pintaMundo(int r,int g, int b){
@@ -36,7 +50,7 @@ public class labirinto2 extends World
         fundo.setColor(cor);
         fundo.fill();
     }
-    
+  
     private void construirLabririnto(){
        
        // cria a barreira para dividir o mapa 

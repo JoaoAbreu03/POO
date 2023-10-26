@@ -31,6 +31,7 @@ public class Barbie extends Jogadores
         movePlayer( "left", "right", "up", "down");
         mudar();
         hitMurro( "left", "right", "up", "down");
+        
         verificarVida();
     }
     /*public void moveBarbie(){
