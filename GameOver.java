@@ -23,8 +23,10 @@ public class GameOver extends World
     {
         addObject(new GameOvertexto(),604,188);
         addObject(new recomecar(),593,280);
-        addObject(new PontuacaoTexto(),344,543);
-        
+    
+        int pontuacaoFinal = Pontuacao.getPontuacaoTotal(); // Obtém a pontuação total
+        PontuacaoFinal actorPontuacaoFinal = new PontuacaoFinal(pontuacaoFinal); // Cria o ator
+        addObject(actorPontuacaoFinal, getWidth() / 2, getHeight() / 2); // Adiciona o ator ao centro do mundo
     }
     
 }

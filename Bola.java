@@ -40,6 +40,9 @@ public void act(){
     }
     passarnivel();
 }
+public void ganharPontos(int pontos) {
+        Pontuacao.adicionarPontos(pontos);
+    }
 private void moveBola(){
     GreenfootImage image = getImage();
     int width = image.getWidth();
@@ -183,6 +186,7 @@ public void mudar(){
 public void passarnivel(){
     if (getWorld() instanceof Futebol) {
         if(golos==golosMarcar){
+            ganharPontos(20);
             Greenfoot.setWorld(new Tenis());
         }
     }else if(getWorld() instanceof Tenis){
@@ -193,6 +197,7 @@ public void passarnivel(){
                  Greenfoot.delay(15);
                  Greenfoot.setWorld(new Tenis());
          }else if(pontos < golos){
+             ganharPontos(20);
             Greenfoot.setWorld(new CorridaDeCarros());
         }
         }

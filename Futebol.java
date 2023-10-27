@@ -26,9 +26,9 @@ public class Futebol extends World
            
        atores();
     }
-     /*public Vidas getVidas() {
-        return new Vidas (vidaKen,vidaBarbie);
-    }*/
+     public void atorGanhaPontos(int pontos) {
+        Pontuacao.adicionarPontos(pontos);
+    }
     public void act(){
         //verificavida();
         /*cronometro=new Cronometro();
