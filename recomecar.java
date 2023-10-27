@@ -19,6 +19,7 @@ public class recomecar extends Actor
     }
      public void mouseCliked(){
         if(Greenfoot.mouseClicked(this)){
+        Pontuacao.resetPontuacao();
         Greenfoot.setWorld(new Futebol());
     }
     }

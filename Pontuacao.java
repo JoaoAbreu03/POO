@@ -17,6 +17,9 @@ public class Pontuacao
     public static void adicionarPontos(int pontos) {
         pontuacaoTotal += pontos;
     }
+     public static void resetPontuacao() {
+        pontuacaoTotal = 0;
+    }
     
     
 }
