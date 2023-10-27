@@ -21,12 +21,19 @@ public class ganhar_butao extends Actor
         //quando um deles chegar troca de mundo
         if(b || k ) {
             // manda los para outro mundo e se o 
-            if(!l2)
+            if(!l2){
+                ganharPontos(20);
                 Greenfoot.setWorld(new labirinto2());
+            }
+                
+                
             else
                 Greenfoot.setWorld(new Inicio());
         }
             
+    }
+    public void ganharPontos(int pontos) {
+        Pontuacao.adicionarPontos(pontos);
     }
     
 }

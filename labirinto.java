@@ -23,9 +23,6 @@ public class labirinto extends World
         int pontuacaoFinal = Pontuacao.getPontuacaoTotal();
         showText("Pontuação "+ pontuacaoFinal, 1100,50);
     }
-    public void ganharPontos(int pontos) {
-        Pontuacao.adicionarPontos(pontos);
-    }
     
     private void populate(){
         

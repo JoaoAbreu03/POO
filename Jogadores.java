@@ -11,7 +11,7 @@ public class Jogadores extends Actor
     GreenfootImage imagem1,imagem2;
     
     //variavel usada para contar as vidas
-    protected int vida = 3;
+    private int vida = 3;
     
     //string up,down,left, right;
     /**

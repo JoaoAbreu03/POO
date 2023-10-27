@@ -23,9 +23,6 @@ public class labirinto2 extends World
         int pontuacaoFinal = Pontuacao.getPontuacaoTotal();
         showText("Pontuação "+ pontuacaoFinal, 1100,50);
     }
-    public void ganharPontos(int pontos) {
-        Pontuacao.adicionarPontos(pontos);
-    }
     
     //aqui quero que durante a duração do mundo esteja sempre a verificar se a
     //vida dos jogados foi alterada ent para isso coloquei as variaveis globais
