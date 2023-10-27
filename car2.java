@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class car2 extends Actor
+public class car2 extends Carros
 {
     private GreenfootImage imgParaCima;
     private GreenfootImage imgParaBaixo;
     private GreenfootImage imgParaDireita;
     private GreenfootImage imgParaEsquerda;
-    private int speed = 15;
+   // private int speed = 15;
 
     /**
      * Act - do whatever the car1 wants to do. This method is called whenever
@@ -21,28 +21,29 @@ public class car2 extends Actor
     public void act()
     {
         movePlayer( "left", "right", "up", "down");
+        ConeCoracao();
     }
     
-    public void movePlayer( String left, String right, String up, String down){
+   public void movePlayer( String left, String right, String up, String down){
         
         int x = getX();
         int y = getY();
         if(Greenfoot.isKeyDown(left)){
-            setLocation(getX()-5, getY());
+            setLocation(getX()-speed, getY());
             setImage(imgParaEsquerda);
         }
         if(Greenfoot.isKeyDown(right)){
-            setLocation(getX()+5, getY());
+            setLocation(getX()+speed, getY());
             setImage(imgParaDireita);
         }
         
         if(Greenfoot.isKeyDown(up)){
-            setLocation(getX(), getY() - 5);
+            setLocation(getX(), getY() - speed);
             setImage(imgParaCima);
         }
         
         if(Greenfoot.isKeyDown(down)){
-            setLocation(getX(), getY() + 5);
+            setLocation(getX(), getY() + speed);
             setImage(imgParaBaixo);
         }
     }

@@ -29,6 +29,14 @@ public class CorridaDeCarros extends World
         addObject(new meta(),545,130);
         addObject(new car1(),480,104);
         addObject(new car2(),480,160);
+        for (int i=0; i<10; i++) {
+            Cone cone = new Cone();
+            addObject(cone, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+        }
+        for (int i=0; i<6; i++) {
+            Coracao coracao = new Coracao();
+            addObject(coracao, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+        }
     }
     private void pintaMundo(int r,int g, int b){
         GreenfootImage fundo= getBackground();

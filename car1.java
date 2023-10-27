@@ -6,14 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class car1 extends Actor
+public class car1 extends Carros
 {
     private GreenfootImage imgParaCima;
     private GreenfootImage imgParaBaixo;
     private GreenfootImage imgParaDireita;
     private GreenfootImage imgParaEsquerda;
-    private int speed = 5;
-
+    
     /**
      * Act - do whatever the car1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,6 +20,7 @@ public class car1 extends Actor
     public void act()
     {
         movePlayer( "A", "D", "W", "S");
+        ConeCoracao();
         //sairPista();
     }
     
@@ -64,6 +64,16 @@ public class car1 extends Actor
         
         setImage(imgParaDireita); // imagem inicial
     }
+    /*public void ConeCoracao(){
+         if (isTouching(Cone.class))
+        {
+            removeTouching(Cone.class);
+            speed=2;
+        }else if(isTouching(Coracao.class)){
+            removeTouching(Coracao.class);
+            speed=speed+1;
+        }
+    }*/
     
     /*public boolean IsTouchingAColor(Color[] referenceColors) {
         GreenfootImage imagemDoMundo = getWorld().getImage().getColorAt(0, 0);
