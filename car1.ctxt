@@ -4,9 +4,11 @@ comment0.text=\r\n\ Write\ a\ description\ of\ class\ car1\ here.\r\n\ \r\n\ @au
 comment1.params=
 comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ car1\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-comment2.params=left\ right\ up\ down
-comment2.target=void\ movePlayer(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-comment3.params=
-comment3.target=car1()
-comment3.text=public\ void\ sairPista(){\r\n\ \ \ \ \ \ \ \ if(isTouching(pistaSemFundo.class)){\r\n\ \ \ \ \ \ \ \ \ \ \ \ speed\=15;\r\n\ \ \ \ \ \ \ \ }else{\r\n\ \ \ \ \ \ \ \ \ \ \ \ speed\=2;\r\n\ \ \ \ \ \ \ \ }\r\n}
-numComments=4
+comment2.params=
+comment2.target=void\ ConeCoracao()
+comment3.params=left\ right\ up\ down
+comment3.target=void\ movePlayer(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment4.params=
+comment4.target=car1()
+comment4.text=public\ void\ sairPista(){\r\n\ \ \ \ \ \ \ \ if(isTouching(pistaSemFundo.class)){\r\n\ \ \ \ \ \ \ \ \ \ \ \ speed\=15;\r\n\ \ \ \ \ \ \ \ }else{\r\n\ \ \ \ \ \ \ \ \ \ \ \ speed\=2;\r\n\ \ \ \ \ \ \ \ }\r\n}
+numComments=5

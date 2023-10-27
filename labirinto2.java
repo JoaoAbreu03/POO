@@ -19,13 +19,20 @@ public class labirinto2 extends World
        
         addObject(b,200,630);
         addObject(k,1000,630);
+        
+        int pontuacaoFinal = Pontuacao.getPontuacaoTotal();
+        showText("Pontuação "+ pontuacaoFinal, 1100,50);
     }
+    public void ganharPontos(int pontos) {
+        Pontuacao.adicionarPontos(pontos);
+    }
+    
     //aqui quero que durante a duração do mundo esteja sempre a verificar se a
     //vida dos jogados foi alterada ent para isso coloquei as variaveis globais
     //para aceder aos valores da vida aqui
     public void act(){
        showText("Vida Barbie: " + b.getVida(), 100,50);
-       showText("Vida Ken: " + k.getVida(), 1100,50);
+       showText("Vida Ken: " + k.getVida(), 1100,80);
     }
     private void populate(){
        //adiciona os adversarios

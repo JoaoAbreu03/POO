@@ -19,7 +19,14 @@ public class labirinto extends World
         // o 40s e 60 é o tempo que demora um ciclo
         timer timer = new timer(40 * 60); 
         addObject(timer, 0, 0);
+        
+        int pontuacaoFinal = Pontuacao.getPontuacaoTotal();
+        showText("Pontuação "+ pontuacaoFinal, 1100,50);
     }
+    public void ganharPontos(int pontos) {
+        Pontuacao.adicionarPontos(pontos);
+    }
+    
     private void populate(){
         
        addObject(new Barbie(),200,630);

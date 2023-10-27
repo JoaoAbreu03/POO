@@ -22,6 +22,18 @@ public class car1 extends Carros
         movePlayer( "A", "D", "W", "S");
         ConeCoracao();
         //sairPista();
+        
+    }
+    public void ConeCoracao(){
+         if (isTouching(Cone.class))
+        {
+            removeTouching(Cone.class);
+            speed=2;
+        }else if(isTouching(Coracao_azul.class)){
+            removeTouching(Coracao_azul.class);
+            speed=speed+1;
+            contador++;
+        }
     }
     
     public void movePlayer( String left, String right, String up, String down){

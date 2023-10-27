@@ -203,7 +203,7 @@ public void passarnivel(){
                  Greenfoot.setWorld(new Tenis());
          }else if(pontos < golos){
              ganharPontos(20);
-            Greenfoot.setWorld(new CorridaDeCarros());
+            Greenfoot.setWorld(new CorridaDosCoracoes());
         }
         }
     }
