@@ -22,6 +22,8 @@ public class Futebol extends World
         addObject(timer, 0, 0);
          //chama os atores que vao estar no mundo  
        atores();
+       int pontuacaoFinal = Pontuacao.getPontuacaoTotal(); // Obtém a pontuação total
+       showText("Pontuação "+pontuacaoFinal, 1100,50);
     }
     //atores que vão ficar no mundo
     private void atores(){
