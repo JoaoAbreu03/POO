@@ -23,6 +23,7 @@ public class Carros extends Actor
     {
         
     }
+    //metodo para retornar a quantidade de coracoes
     public int getCoracoes(){
         return contador;
     }

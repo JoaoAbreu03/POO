@@ -24,6 +24,8 @@ public class car1 extends Carros
         //sairPista();
         
     }
+    //a funcao verifica se esta a tocar no cone, se sim coloca a velocidade no 2
+    //se tocar no coracao aumenta a velocidade e conta os coracoes
     public void ConeCoracao(){
          if (isTouching(Cone.class))
         {
@@ -35,7 +37,7 @@ public class car1 extends Carros
             contador++;
         }
     }
-    
+    //movimento
     public void movePlayer( String left, String right, String up, String down){
         
         int x = getX();
@@ -67,7 +69,6 @@ public class car1 extends Carros
             speed=2;
         }
     }*/
-    
     public car1(){
         imgParaCima = new GreenfootImage("car1_cima.png");
         imgParaBaixo = new GreenfootImage("car1_baixo.png");

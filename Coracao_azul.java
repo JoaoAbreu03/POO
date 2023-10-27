@@ -14,6 +14,7 @@ public class Coracao_azul extends Coracao
      */
     public Coracao_azul()
     {
+        //coloca a escala da imagem
          GreenfootImage image = getImage();
         int witdth = image.getWidth();
         int height = image.getHeight();

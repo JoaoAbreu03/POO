@@ -8,11 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class CorridaDosCoracoes extends World
 {
+    //criacao dos objetos
     car1 carro1 = new car1();
     car2 carro2 = new car2();
     
     public void act()
     {
+        //quando os dois carros apanharem os 9 coracoes cada, aumenta a pontuacao e muda de mundo
         if(carro1.getCoracoes()==9 && carro2.getCoracoes()==9 ){
             ganharPontos(20);
             Greenfoot.setWorld(new labirinto());
@@ -25,19 +27,19 @@ public class CorridaDosCoracoes extends World
      */
     public CorridaDosCoracoes()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1200, 700, 1);
-        //GreenfootImage background = new GreenfootImage("pistaDeCarros2.png"); // Load your background image
-        //setBackground(background);
-        preparaObjetos(); 
         
-        timer timer = new timer(40 * 60); 
+        super(1200, 700, 1);
+        
+        preparaObjetos(); 
+        //coloca o timer a 30 segundos
+        timer timer = new timer(30 * 60); 
         addObject(timer, 0, 0);
         
         int pontuacaoFinal = Pontuacao.getPontuacaoTotal();
         showText("Pontuação "+ pontuacaoFinal, 1100,50);
     }
     private void preparaObjetos(){
+        //adiciona os carros, cones e coracoes de cada cor
         addObject(new fundo_relva(),600,350);
         addObject(carro1,480,104);
         addObject(carro2,480,160);
@@ -55,6 +57,7 @@ public class CorridaDosCoracoes extends World
             addObject(coracao, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
         }
     }
+    //recebe os pontos e adiciona a pontuacao final
     public void ganharPontos(int pontos) {
         Pontuacao.adicionarPontos(pontos);
     }

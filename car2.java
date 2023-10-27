@@ -23,6 +23,8 @@ public class car2 extends Carros
         movePlayer( "left", "right", "up", "down");
         ConeCoracao();
     }
+    //a funcao verifica se esta a tocar no cone, se sim coloca a velocidade no 2
+    //se tocar no coracao aumenta a velocidade e conta os coracoes
     public void ConeCoracao(){
          if (isTouching(Cone.class))
         {
@@ -34,7 +36,7 @@ public class car2 extends Carros
             contador++;
         }
     }
-    
+    //movimento
    public void movePlayer( String left, String right, String up, String down){
         
         int x = getX();
