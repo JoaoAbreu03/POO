@@ -11,7 +11,7 @@ public class Bola extends Actor
 private int golos, golosMarcar, equipa, jogador,pontos;
 private boolean numeroPontosGerado=false;
 GreenfootImage bola1,bola2;
-//private int random;
+
 public Bola(){
     GreenfootImage image = getImage();
     int witdth = image.getWidth();
@@ -40,9 +40,12 @@ public void act(){
     }
     passarnivel();
 }
+//recebe os pontos e adiciona a pontuacao final
 public void ganharPontos(int pontos) {
         Pontuacao.adicionarPontos(pontos);
     }
+    //faz com que a bola se mova sempre que a barbie e o ken a tocam, tanto no futebol como tambem no tenis 
+    //no caso do tenis as jogadoras1 e 2 tambem movem a bola
 private void moveBola(){
     GreenfootImage image = getImage();
     int width = image.getWidth();
@@ -149,6 +152,7 @@ private void moveBola(){
         }
     }
 }
+//quando marcam golo ou ponto no caso do tenis este método conta
 private void contapontos(){
     if(getWorld() instanceof Futebol){
         if(isTouching(Guarda.class)){
@@ -174,6 +178,7 @@ private void pontosequipa2(){
             getWorld().showText("Equipa 2 : "+pontos, 100,650);
             Greenfoot.delay(10);
     }
+    //muda a imagem da bola dependendo do mundo em que está
 public void mudar(){
     if (getWorld() instanceof Futebol) {
         setImage(bola1);
@@ -182,7 +187,7 @@ public void mudar(){
     }
     
 }
-
+//faz com que passe de nivel ou no caso do tenis tambem pode manter no mesmo nivel
 public void passarnivel(){
     if (getWorld() instanceof Futebol) {
         if(golos==golosMarcar){

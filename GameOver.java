@@ -24,14 +24,12 @@ public class GameOver extends World
         int pontuacaoFinal = Pontuacao.getPontuacaoTotal(); // Obtém a pontuação total
         if(pontuacaoFinal==100){
              addObject(new Win(),604,188);
-        addObject(new JogarNovamente(),593,280);
+            addObject(new JogarNovamente(),593,280);
         }else{
             addObject(new GameOvertexto(),604,188);
-        addObject(new recomecar(),593,280);
+            addObject(new recomecar(),593,280);
         }
        
-    
-        
         PontuacaoFinal actorPontuacaoFinal = new PontuacaoFinal(pontuacaoFinal); // Cria o ator
         addObject(actorPontuacaoFinal, getWidth() / 2, getHeight() / 2); // Adiciona o ator ao centro do mundo
     }
